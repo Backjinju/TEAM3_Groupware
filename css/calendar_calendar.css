@@ -1,0 +1,96 @@
+/* 220818 성선규 초기 작업 시작 */
+*{
+    /* border: 1px solid red; */
+}
+.calendar_main_section{
+    display: flex;
+}
+.content_box{
+    height: 80px;
+    width: 100%;
+    font-size: 23px;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.calendar_sidebar{
+    width: 250px;
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+/* 사이드바 버튼 */
+.calendar_register{
+    padding: 25px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar_register button{
+    width: 150px;
+    height: 40px;
+}
+
+/* 일정 */
+.list_header{
+    padding: 10px;
+}
+.list_header > span{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+.list_header .calendar_list{
+    padding: 3px;
+}
+.list_header .calendar_list ul{
+    list-style-type: none;
+    padding: 3px;
+    margin: 0;
+}
+.list_header .calendar_list ul li{
+    margin: 2px 0px 2px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 일정 색상 (차후 삭제 필요)*/
+ul > li > button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+}
+ul > li > button:hover{
+    border: 2px solid black;
+}
+ul > li:nth-child(1) > button{
+    background-color: rgb(255, 153, 153);
+}
+ul > li:nth-child(2) > button{
+    background-color: rgb(165, 9, 139);
+}
+ul > li:nth-child(3) > button{
+    background-color: rgb(110, 131, 250);
+}
+
+/* 일정 추가 및 일정 관리 */
+.calender_add, .calendar_managemnt{
+    padding: 10px 0 0 10px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+.calender_add:hover{
+    cursor: pointer;
+}
+.calendar_managemnt:hover{
+    cursor: pointer;
+}
+
+/* 년 월 표시 */
+.year_month{
+    width: 500px;
+    display: flex;
+    background-color: black;
+}
