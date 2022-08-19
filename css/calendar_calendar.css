@@ -1,96 +1,309 @@
 /* 220818 성선규 초기 작업 시작 */
+/* 220819 성선규 전날 작업물 50% 삭제 후 재시작 */
 *{
     /* border: 1px solid red; */
 }
+body{
+    overflow-x: hidden;
+}
 .calendar_main_section{
-    display: flex;
+    height: 80vh;    
 }
 .content_box{
     height: 80px;
-    width: 100%;
-    font-size: 23px;
+    width: 1445px;
+    font-size: 2rem;
     padding: 15px;
-    border-bottom: 1px solid gray;
     font-weight: bold;
     display: flex;
     align-items: center;
+    position: fixed;
+    background-color: white;
 }
 .calendar_sidebar{
     width: 250px;
-    height: 100%;
-    border-right: 1px solid black;
-}
-
-/* 사이드바 버튼 */
-.calendar_register{
-    padding: 25px 10px 10px 10px;
+    height: 825px;
+    background-color: rgb(220, 222, 233);
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.calendar_register button{
-    width: 150px;
-    height: 40px;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 80px;
 }
 
 /* 일정 */
 .list_header{
-    padding: 10px;
+    padding: 10px 0px 0px 20px;
 }
 .list_header > span{
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: bolder;
+    color: gray;
 }
-.list_header .calendar_list{
-    padding: 3px;
-}
-.list_header .calendar_list ul{
+
+.my_calendar_list > ul{
     list-style-type: none;
-    padding: 3px;
+    padding: 0;
     margin: 0;
 }
-.list_header .calendar_list ul li{
-    margin: 2px 0px 2px 10px;
+.my_calendar_list > ul > li{
+    margin: 3px 0 3px 0;
+    font-weight: 600
+}
+
+/* 일정 버튼 */
+#my_calendar_list_2{
+    accent-color: red;
+}
+#my_calendar_list_3{
+    accent-color: rgb(194, 136, 30);
+}
+#my_calendar_list_4{
+    accent-color: rgb(41, 170, 12);
+}
+#my_calendar_list_5{
+    accent-color: rgb(165, 17, 176);
+}
+#Etc_calendar_list_1{
+    accent-color: gray;
+}
+#Etc_calendar_list_2{
+    accent-color: rgb(79, 148, 238);
+}
+
+/* 사이드 바 하단 미니 달력 박스*/
+.mini_calendar{
+    border-top: 1px solid rgba(128, 128, 128, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* 사이드 바 하단 미니 달력 년월 */
+.mini_calendar_month{
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+}
+.mini_calendar_month > div:nth-child(1),
+.mini_calendar_month > div:nth-child(3){
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mini_calendar_month > div:nth-child(2){
+    font-weight: 600;
+}
+
+/* 사이드 바 하단 미니 달력 */
+.mini_calendar_main{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+}
+.mini_calendar_main td{
+    width: 33px;
+    height: 25px;
+}
+.mini_calendar_main td > div{
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* 현재 일자 */
+.mini_calendar_today{
+    color: white;
+    background-color: rgb(198, 54, 54);
+}
+/* 이번달에 포함되지 않는 일자 */
+.not_included{
+    color: rgb(142, 142, 142);
+}
+/* 이번달에 포함되는 일자 */
+.month_in_day{
+    font-weight: 600;
+}
+
+/* 메인 캘린더 */
+.main_calendar_section{
+    position: absolute;
+    top: 78px;
+    left: 475px;
+    width: 1445px;
+    z-index: -1;
+}
+
+/* 메인 캘린더 상단 일, 주, 월, 년 버튼 */
+.main_calendar_section > div:nth-child(1){
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(245, 245, 249);
 }
-/* 일정 색상 (차후 삭제 필요)*/
-ul > li > button{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: none;
-}
-ul > li > button:hover{
-    border: 2px solid black;
-}
-ul > li:nth-child(1) > button{
-    background-color: rgb(255, 153, 153);
-}
-ul > li:nth-child(2) > button{
-    background-color: rgb(165, 9, 139);
-}
-ul > li:nth-child(3) > button{
-    background-color: rgb(110, 131, 250);
-}
-
-/* 일정 추가 및 일정 관리 */
-.calender_add, .calendar_managemnt{
-    padding: 10px 0 0 10px;
-    font-size: 1.1rem;
-    font-weight: bolder;
-}
-.calender_add:hover{
-    cursor: pointer;
-}
-.calendar_managemnt:hover{
-    cursor: pointer;
-}
-
-/* 년 월 표시 */
-.year_month{
-    width: 500px;
+.day_week_month_year{
     display: flex;
-    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    width: 260px;
+    height: 35px;
+    background-color: rgb(245, 245, 249);
+    border-radius: 4px;
+}
+.day_week_month_year > div{
+    width: 65px;
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(215, 215, 218);
+    border-collapse: collapse;
+}
+.day_week_month_year > div:hover{
+    cursor: pointer;
+}
+/* 일 */
+.day_week_month_year > div:nth-child(1){
+    border-radius: 4px 0px 0px 4px;
+}
+/* 주 */
+.day_week_month_year > div:nth-child(2){
+    border-left: 1px solid rgba(128, 128, 128, 0.5);
+    border-right: 1px solid rgba(128, 128, 128, 0.5);
+}
+/* 월 */
+.day_week_month_year > div:nth-child(3){
+    background-color: rgb(232, 232, 236);
+}
+/* 년 */
+.day_week_month_year > div:nth-child(4){
+    border-radius: 0px 4px 4px 0px;
+    border-left: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+/* 상단 검색 */
+.main_calendar_search_container > div{
+    position: relative;
+}
+.main_calendar_search_container input{
+    background-color: rgb(245, 245, 249);
+    border: 1px solid rgb(215, 215, 218);
+    border-radius: 7px;
+    height: 20px;
+    margin-right: 10px;
+    padding: 10px 0px 10px 15px;
+}
+.main_calendar_search_container input ~ label{
+    position: absolute;
+    right: 120px;
+    opacity: 0.3;
+}
+.main_calendar_search_container input:focus ~ label{
+    opacity: 0;
+}
+
+/* 메인 달력 년, 월 */
+.main_calendar_section > div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+.main_calendar_year_month{
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 5px 0px 0px 15px;
+}
+
+/* 메인 달력 달력 넘기기 및 오늘 일자 찾기 */
+.before_after_today_btn_container{
+    display: flex;
+    width: 120px;
+    height: 30px;
+    margin: 10px 15px 0px 0px;
+    justify-content: space-between;
+}
+.before_after_today_btn_container > div{
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 1px 0px rgba(128, 128, 128, 0.451);
+}
+.before_after_today_btn_container > div:nth-child(1),
+.before_after_today_btn_container > div:nth-child(3){
+    width: 30px;
+}
+.before_after_today_btn_container > div:nth-child(2){
+    width: 60px;
+    font-weight: 600;
+}
+
+/* 메인 달력 */
+.main_calendar_section > div:nth-child(3){
+    height: 100%;
+    width: 1445px;
+}
+/* tr{
+    border: 1px solid red;
+}
+td{
+    border: 1px solid red;
+}
+td>div{
+    border: 1px solid red;
+}
+td>div>span{
+    border: 1px solid red;
+} */
+
+.main_calendar_table{
+    width: 1445px;
+}
+.main_calendar_table tr td{
+    border-bottom: 1px solid rgba(202, 202, 202, 0.5);
+    border-right: 1px solid rgba(202, 202, 202, 0.5);
+    border-collapse: collapse;
+}
+.main_calendar_table,
+.main_calendar_table tr,
+.main_calendar_table tr td{
+    margin: 0;
+    padding: 0;
+}
+.main_calendar_table tr:nth-child(1) td{
+    border-right: none;
+    border-bottom: 1px solid gray;
+}
+.main_calendar_table tr td div:nth-child(1){
+    width: 202px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.main_calendar_table tr td div:nth-child(2){
+    height: 88px;
+}
+.main_calendar_table tr td div span{
+    margin: 5px 5px 0 0;
+}
+
+/* 주말 색상 변경 */
+.main_calendar_weekend{
+    background-color: rgb(245, 245, 249);
+}
+.main_calendar_weekend_week{
+    color: gray;
+}
+
+/* 평일 폰트 두껍게 */
+.main_calendar_weekday{
+    font-weight: 600;
 }
