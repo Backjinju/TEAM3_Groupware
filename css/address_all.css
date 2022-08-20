@@ -1,0 +1,109 @@
+/* 
+=============================
+22/08/18 노현
+전사 주소록 기본 css 1차작성
+=============================
+*/
+/* 전사주소록 타이틀 */
+*
+{
+    border: 1px solid royalblue;
+}
+.section_address_title {
+    height: 80px;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+
+}
+
+.all_address_title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.all_address_next {
+    padding: 10px;
+    color: gray;
+}
+
+/* 주소록 검색 */
+.address_search {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px;
+
+}
+
+/* EXCEL 내보내기 */
+.excel_sendout {
+    margin-left: 40px;
+}
+
+/* 자음별 검색 */
+.search_consonant {
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+/* a링크 색 밑줄 제거 */
+a:link {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+
+}
+
+/* 필드설정 */
+.field_set {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 테이블 */
+.table_title {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+td {
+    padding: 10px 0;
+}
+
+th:first-child {
+    padding-left: 15px;
+}
+
+td:first-child {
+    padding-left: 15px;
+}
+
+/* 하단 페이지 넘버 */
+.page_num_box {
+    display: flex;
+    justify-content: center;
+}
+
+.page_num {
+    padding: 30px;
+}
+
+.page_num>a {
+    padding: 10px;
+}

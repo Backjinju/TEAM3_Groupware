@@ -1,0 +1,122 @@
+*
+{
+    border: 1px solid royalblue;
+    
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+
+}
+
+/* 조직도 타이틀 */
+.office_map_title{
+    height: 80px;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+/* 조직도 사이드 내비 */
+.office_map_sidenav{
+    border: 1px solid rgb(13,110,253);
+    border-radius: 4px;
+    background-color: rgb(13,110,253);
+    width: 400px;
+    height: 750px;
+    margin-left: 40px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.office_map_sidenav_box{
+    padding: 10px;
+}
+
+.group{
+    font-size: 22px;
+    padding: 3px 10px;
+    font-weight: bold;
+}
+/* 각 팀별 직원 가림 */
+.group_employee{
+    display: none;
+    padding: 15px;
+    font-weight: bold;
+}
+.strategic_planning_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+.management_support_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+.management_support_team > a{
+    
+
+}
+.hr_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+.sales_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+.marketing_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+.it_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+
+.employee_information{
+    position: absolute;
+    top: 123px;
+    left: 850px;
+    width: 900px;
+    height: 700px;
+    
+}
+.employee_information_top{
+    text-align: center;
+    font-size: 200px;
+}
+
+
