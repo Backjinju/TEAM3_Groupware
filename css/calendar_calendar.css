@@ -3,9 +3,6 @@
 *{
     /* border: 1px solid red; */
 }
-body{
-    overflow-x: hidden;
-}
 .calendar_main_section{
     height: 80vh;    
 }
@@ -126,7 +123,7 @@ body{
 }
 /* 이번달에 포함되지 않는 일자 */
 .not_included{
-    color: rgb(142, 142, 142);
+    color: rgba(142, 142, 142, 0.7);
 }
 /* 이번달에 포함되는 일자 */
 .month_in_day{
@@ -251,18 +248,6 @@ body{
     height: 100%;
     width: 1445px;
 }
-/* tr{
-    border: 1px solid red;
-}
-td{
-    border: 1px solid red;
-}
-td>div{
-    border: 1px solid red;
-}
-td>div>span{
-    border: 1px solid red;
-} */
 
 .main_calendar_table{
     width: 1445px;
@@ -306,4 +291,9 @@ td>div>span{
 /* 평일 폰트 두껍게 */
 .main_calendar_weekday{
     font-weight: 600;
+}
+
+td > div:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.5);
 }
