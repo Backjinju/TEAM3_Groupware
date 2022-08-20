@@ -9,7 +9,9 @@
     <meta name="author" content="" />
     <title>JaeHee Group</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="../css/styles.css" rel="stylesheet" />
+
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/calendar_calendar.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -54,13 +56,14 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Home
                         </a>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_message"
-                            aria-expanded="false" aria-controls="collapse_message">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_message" aria-expanded="false" aria-controls="collapse_message">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             쪽지
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_message" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_message" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../message/message_write.html">쪽지쓰기</a>
                                 <a class="nav-link" href="../message/message_receive.html">받은쪽지함</a>
@@ -77,7 +80,8 @@
                             전자결재
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapseEDMS" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapseEDMS" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../EDMS/EDMS_home.html">전자결재홈</a>
                                 <a class="nav-link" href="../EDMS/EDMS_new.html">새결재진행</a>
@@ -86,8 +90,8 @@
                                 <a class="nav-link" href="../EDMS/EDMS_end.html">완료문서</a>                    
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_worktime"
-                            aria-expanded="false" aria-controls="collapse_worktime">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_worktime" aria-expanded="false" aria-controls="collapse_worktime">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             근태관리
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -107,50 +111,54 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             ToDo+
                         </a>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_calendar"
-                            aria-expanded="false" aria-controls="collapse_calendar">
-                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_calendar" aria-expanded="false" aria-controls="collapse_calendar">
+                            <div class="sb-nav-link-icon"><i class="fa-regular fa-calendar-days"></i></div>
                             일정
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_calendar" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_calendar" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../calendar/calendar_calendar.html">캘린더</a>
                                 <a class="nav-link" href="../calendar/calendar_mycalendar.html">내 캘린더 관리</a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_booking"
-                            aria-expanded="false" aria-controls="collapse_booking">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_booking" aria-expanded="false" aria-controls="collapse_booking">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             예약
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_booking" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_booking" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../booking/booking_new.html">예약하기</a>
                                 <a class="nav-link" href="../booking/booking_view.html">나의 예약 목록 </a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_board"
-                            aria-expanded="false" aria-controls="collapse_board">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_board" aria-expanded="false" aria-controls="collapse_board">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             게시글
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_board" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_board" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../board/board_notice.html">공지게시판</a>
                                 <a class="nav-link" href="../board/board_normal.html">일반게시판</a>
                                 <a class="nav-link" href="../board/board_docu.html">자료실</a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collaps_address"
-                            aria-expanded="false" aria-controls="collapse_address">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collaps_address" aria-expanded="false" aria-controls="collapse_address">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             주소록
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collaps_address" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collaps_address" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../address/address_all.html">전사 주소록</a>
                                 <a class="nav-link" href="../address/address_personal.html">개인 주소록</a>                                
@@ -168,15 +176,748 @@
                 </div>
             </nav>
         </div>
-        <div id="layoutSidenav_content">
-            <div class="content_box" style="background-color: gray; height: 80px;">
-                80px
+
+        <!-- 220818 성선규 추가 -->
+        <div id="layoutSidenav_content" class="calendar_main_section">
+            <div class="content_box">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span class="head_title">
+                    캘린더
+                </span>
+            </div>
+            <!-- 캘린더 사이드 바 -->
+            <div class="calendar_sidebar">
+                <div>
+                    <div class="my_calendar_container list_header">
+                        <span>
+                            일정
+                        </span>
+                        <div class="my_calendar_list">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <input type="checkbox" id="my_calendar_list_1" checked>
+                                        <label for="my_calendar_list_1">
+                                            집
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <input type="checkbox" id="my_calendar_list_2" checked>
+                                        <label for="my_calendar_list_2">
+                                            직장
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <input type="checkbox" id="my_calendar_list_3" checked>
+                                        <label for="my_calendar_list_3">
+                                            약속
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <input type="checkbox" id="my_calendar_list_4" checked>
+                                        <label for="my_calendar_list_4">
+                                            할일
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <input type="checkbox" id="my_calendar_list_5" checked>
+                                        <label for="my_calendar_list_5">
+                                            생일
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="my_calendar_container list_header">
+                        <span>
+                            기타
+                        </span>
+                        <div class="my_calendar_list calendar_list">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <input type="checkbox" id="Etc_calendar_list_1" checked>
+                                        <label for="Etc_calendar_list_1">
+                                            대한민국 공휴일
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <input type="checkbox" id="Etc_calendar_list_2" checked>
+                                        <label for="Etc_calendar_list_2">
+                                            생일
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini_calendar">
+                    <div class="mini_calendar_month">
+                        <div>
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div>
+                            <span>
+                                2022년
+                            </span>
+                            <span>
+                                8월
+                            </span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="mini_calendar_main">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <span>일</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>월</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>화</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>수</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>목</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>금</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>토</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="not_included">
+                                        <span>31</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>1</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>2</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>3</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>4</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>5</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>6</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>7</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>8</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>9</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>10</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>11</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>12</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>13</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>14</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>15</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>16</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>17</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>18</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mini_calendar_today month_in_day">
+                                        <span>19</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>20</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>21</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>22</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>23</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>24</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>25</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>26</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>27</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>28</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>29</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>30</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month_in_day">
+                                        <span>31</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>1</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>2</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>3</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="not_included">
+                                        <span>4</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>5</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>6</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>7</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>8</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>9</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="not_included">
+                                        <span>10</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="main_calendar_section">
+                <!-- 상단 -->
+                <div>
+                    <div></div>
+                    <div class="day_week_month_year">
+                        <div>
+                            <span>
+                                일
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                주
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                월
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                년
+                            </span>
+                        </div>
+                    </div>
+                    <div class="main_calendar_search_container">
+                        <div>
+                            <input type="text" id="main_calendar_search">
+                            <label for="main_calendar_search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Search
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 메인 상단-->
+                <div>
+                    <div class="main_calendar_year_month">
+                        <span>
+                            2022년
+                        </span>
+                        <span>
+                            11월
+                        </span>
+                    </div>
+                    <div class="before_after_today_btn_container">
+                        <div>
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div>
+                            <span>
+                                오늘
+                            </span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- 메인 달력 -->
+                <div>
+                    <table class="main_calendar_table">
+                        <tr>
+                            <td class="main_calendar_weekend_week">
+                                <div>
+                                    <span>일</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>월</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>화</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>수</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>목</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <span>금</span>
+                                </div>
+                            </td>
+                            <td class="main_calendar_weekend_week">
+                                <div>
+                                    <span>토</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="main_calendar_weekend">
+                                <div class="not_included">
+                                    <span>31일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>8월 1일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>2일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>3일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>4일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>5일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td class="main_calendar_weekend">
+                                <div>
+                                    <span>6일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="main_calendar_weekend">
+                                <div>
+                                    <span>7일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>8일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>9일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>10일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>11일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>12일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td class="main_calendar_weekend">
+                                <div>
+                                    <span>13일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="main_calendar_weekend">
+                                <div>
+                                    <span>14일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>15일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>16일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>17일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>18일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>19일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td class="main_calendar_weekend">
+                                <div>
+                                    <span>20일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="main_calendar_weekend">
+                                <div>
+                                    <span>21일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>22일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>23일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>24일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>25일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>26일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td class="main_calendar_weekend">
+                                <div>
+                                    <span>27일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="main_calendar_weekend">
+                                <div>
+                                    <span>28일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>29일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>30일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="main_calendar_weekday">
+                                    <span>31일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="not_included">
+                                    <span>10월 1일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="not_included">
+                                    <span>2일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td class="main_calendar_weekend">
+                                <div class="not_included">
+                                    <span>3일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="main_calendar_weekend">
+                                <div class="not_included">
+                                    <span>4일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="not_included">
+                                    <span>5일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="not_included">
+                                    <span>6일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="not_included">
+                                    <span>7일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="not_included">
+                                    <span>8일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div class="not_included">
+                                    <span>9일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                            <td class="main_calendar_weekend">
+                                <div class="not_included">
+                                    <span>10일</span>
+                                </div>
+                                <div></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="../js/scripts.js"></script>
+
 </body>
 
 </html>
