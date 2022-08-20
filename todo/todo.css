@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'BBTreeGR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.layoutSide_box{
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* todo */
+.content_box_first{
+        height: 80px;
+        width: 100%;
+        font-size: 2rem;
+        font-family: 'BBTreeGR';
+        padding: 15px;
+        border-bottom: 1px solid gray;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+.xi-library-books{
+    margin-right: 5px;
+    font-size: 30px;
+    position: absolute;
+    top : 18px;
+}
+.content_box_first>p{
+    position:absolute;
+    left: 50px;
+}
+
+
+
+.content_box_two{
+    font-weight: bold;
+    font-family: 'BBTreeGR';
+    padding: 15px;
+    margin-left: 20px;
+}
+
+.favorite_borad_box_font, .my_borad_box_font{
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: 'BBTreeGR';
+}
+.favorite_borad_box, .my_borad_box{
+        font-family: 'BBTreeGR';
+        border: 1px solid gray;
+        box-shadow: 1px 3px 3px gray;
+        width: 230px;
+        height: 130px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;    
+        margin-right: 30px;
+}
+.favorite_content_box, .my_content_box{
+    width: 210px;
+    height: 95px;
+    padding: 0 15px 0 30px;
+    position: relative;
+}
+.box_position{
+    margin: 25px;
+    display: flex;
+}
+
+.content_box_three{
+    font-weight: bold;
+    padding: 45px 15px;
+    margin-left: 20px;
+    font-family: 'BBTreeGR';
+}
+.box_plus{
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        padding: 0 70px;
+}
+.content_box_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.xi-star, .xi-star-o{
+     position: absolute;
+     top : 0;
+     right: 10px;
+     font-size: 20px;
+     
+}
+.xi-star{
+    color: darkorange;
+}
+.xi-star:hover, .xi-star-o:hover{
+    cursor: pointer;
+}
+.xi-plus-min{
+    font-weight: bold;
+    font-size: 60px; 
+}
+.xi-plus-min:hover{
+    cursor: pointer;
+}
