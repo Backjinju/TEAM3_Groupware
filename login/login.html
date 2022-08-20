@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/login/login.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body>
+    <div class="login_container">
+        <div class="login_leftbox">
+            <img src="/login/team.png" alt="">
+        </div>
+        <div class="login_rightbox">
+            <div class="login_title">재희그룹</div>
+            <div class="login_idpw login_id">
+                <i class="xi-mail"></i>
+                <input type="text" id="login_id_input" placeholder="사원번호" onfocus="this.placeholder=''" onblur="this.placeholder='사원번호'">
+            </div>
+            <div class="login_idpw login_pw">
+                <i class="xi-lock"></i>
+                <input type="password" id="login_pw_input" placeholder="비밀번호" onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호'">
+            </div>
+            <button class="login_submit btn btn-primary">접속</button>
+            <div class="login_option">
+                <div class="login_save_id">
+                    <input type="checkbox" id="login_save_id_checkbox" name="login_save_id_checkbox">
+                    <label for="login_save_id_checkbox">
+                        <span>사원번호 저장</span>
+                    </label>
+                </div>
+                <div class="login_save_pw">
+                    <span>비밀번호 초기화</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
