@@ -44,6 +44,10 @@
     width: 100%;
     margin: 5px 0;
 }
+.message_write_insert_info #important {
+    accent-color: red;
+}
+
 #message_write_container button{
     background-color: RGB(13, 110, 253);
     color: white;
