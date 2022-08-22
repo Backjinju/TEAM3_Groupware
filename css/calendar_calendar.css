@@ -4,7 +4,7 @@
     /* border: 1px solid red; */
 }
 .calendar_main_section{
-    height: 80vh;    
+    height: 80vh;
 }
 .content_box{
     height: 80px;
@@ -75,7 +75,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 14.5px 10px;
 }
 
 /* 사이드 바 하단 미니 달력 년월 */
@@ -104,6 +104,9 @@
 .mini_calendar_main td{
     width: 33px;
     height: 25px;
+}
+.mini_calendar_main td:not(.mini_calendar_main > tr:nth-child(1)) div:hover{
+    background-color: rgb(232, 232, 236);
 }
 .mini_calendar_main td > div{
     width: 25px;
@@ -136,7 +139,7 @@
     top: 78px;
     left: 475px;
     width: 1445px;
-    z-index: -1;
+    z-index: 100;
 }
 
 /* 메인 캘린더 상단 일, 주, 월, 년 버튼 */
@@ -164,8 +167,9 @@
     border: 1px solid rgb(215, 215, 218);
     border-collapse: collapse;
 }
-.day_week_month_year > div:hover{
+.day_week_month_year div:hover{
     cursor: pointer;
+    background-color: rgb(232, 232, 236);
 }
 /* 일 */
 .day_week_month_year > div:nth-child(1){
@@ -205,6 +209,7 @@
 }
 .main_calendar_search_container input:focus ~ label{
     opacity: 0;
+    transition: all 0.3s;
 }
 
 /* 메인 달력 년, 월 */
@@ -274,7 +279,7 @@
     align-items: center;
 }
 .main_calendar_table tr td div:nth-child(2){
-    height: 88px;
+    height: 92.5px;
 }
 .main_calendar_table tr td div span{
     margin: 5px 5px 0 0;
@@ -293,7 +298,7 @@
     font-weight: 600;
 }
 
-td > div:hover{
+.main_calendar_table td:hover{
     cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: rgba(128, 128, 128, 0.2);
 }
