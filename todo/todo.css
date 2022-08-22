@@ -26,12 +26,11 @@
 .xi-library-books{
     margin-right: 5px;
     font-size: 30px;
-    position: absolute;
-    top : 18px;
 }
 .content_box_first>p{
     position:absolute;
     left: 50px;
+    margin:0;
 }
 
 
