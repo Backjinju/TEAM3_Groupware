@@ -1,6 +1,12 @@
+/* 
+=============================
+22/08/20 노현
+조직도 기본 css 1차작성
+=============================
+*/
 *
 {
-    border: 1px solid royalblue;
+    /* border: 1px solid royalblue; */
     
 }
 
@@ -38,10 +44,10 @@ a:active {
 
 }
 
-/* 조직도 사이드 내비 */
+/* 조직도 왼쪽 사이드 */
 .office_map_sidenav{
     border: 1px solid rgb(13,110,253);
-    border-radius: 4px;
+    border-radius: 20px;
     background-color: rgb(13,110,253);
     width: 400px;
     height: 750px;
@@ -54,69 +60,97 @@ a:active {
     padding: 10px;
 }
 
-.group{
+.office_map_group{
     font-size: 22px;
     padding: 3px 10px;
     font-weight: bold;
 }
+.office_map_ceo{
+    margin-left: 15px;
+}
 /* 각 팀별 직원 가림 */
-.group_employee{
+.office_map_group_employee{
     display: none;
+    margin-left: 15px;
     padding: 15px;
     font-weight: bold;
 }
-.strategic_planning_team{
+.office_map_strategic_planning_team{
     /* display: none; */
     display: flex;
     flex-direction: column;
     padding: 2px 25px;
 }
-.management_support_team{
-    /* display: none; */
-    display: flex;
-    flex-direction: column;
-    padding: 2px 25px;
-}
-.management_support_team > a{
-    
-
-}
-.hr_team{
-    /* display: none; */
-    display: flex;
-    flex-direction: column;
-    padding: 2px 25px;
-}
-.sales_team{
-    /* display: none; */
-    display: flex;
-    flex-direction: column;
-    padding: 2px 25px;
-}
-.marketing_team{
-    /* display: none; */
-    display: flex;
-    flex-direction: column;
-    padding: 2px 25px;
-}
-.it_team{
+.office_map_management_support_team{
     /* display: none; */
     display: flex;
     flex-direction: column;
     padding: 2px 25px;
 }
 
-.employee_information{
+.office_map_hr_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+.office_map_sales_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+.office_map_marketing_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+.office_map_it_team{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    padding: 2px 25px;
+}
+
+/* 조직도 오른쪽 상세 */
+
+.office_map_employee_container{
     position: absolute;
     top: 123px;
     left: 850px;
     width: 900px;
     height: 700px;
+    border: 2px solid black;
+    border-radius: 20px;
     
 }
-.employee_information_top{
+.office_map_employee_picture{
     text-align: center;
     font-size: 200px;
+    border-bottom: 1px solid black;
 }
+
+.office_map_employee_information{
+    font-size: 23px;
+}
+.office_map_each_title{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+.office_map_each_title>div{
+    margin:20px 10px;
+    padding-left: 20px;
+}
+.office_map_each_content{
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+.office_map_each_content>div{
+    margin:20px 10px;
+}
+
 
 
