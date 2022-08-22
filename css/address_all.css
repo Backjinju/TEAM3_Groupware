@@ -7,7 +7,7 @@
 /* 전사주소록 타이틀 */
 *
 {
-    border: 1px solid royalblue;
+    /* border: 1px solid royalblue; */
 }
 .section_address_title {
     height: 80px;
@@ -78,8 +78,10 @@ a:active {
 
 /* 테이블 */
 .table_title {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    background-color: rgb(13,110,253);
+    color: white;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
 }
 
 td {
