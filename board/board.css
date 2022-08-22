@@ -1,0 +1,94 @@
+.content_box {
+    height: 80px;
+    width: 100%;
+    font-size: 2rem;
+    font-family: 'BBTreeGR';
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.board_con{
+    font-family: 'BBTreeGR';
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top : 50px;
+}
+.board_write_btn{
+    margin: 10px;
+}
+.board_table_position{
+    margin: 10px;
+}
+.board_table tr td{
+    padding: 10px 0;
+}
+.board_table{
+   height: 80%;
+   width: 100%;
+   text-align: center;
+}
+.board_table_hover{
+   border-bottom : 1px solid gray;
+}
+.board_table_hover:hover{
+   background-color: azure;
+   cursor: pointer;
+}
+.table_bg{
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+.table_title_left{
+    text-align: left !important;
+    padding-left: 20px !important;
+}
+
+/*페이지넘버*/
+.board_list_number{
+    padding-top: 25px;
+    text-align: center;
+}
+.board_list_n_menu{
+    padding:  3px;
+    margin:3px; 
+    text-align: center;
+}
+.board_list_n_menu a{
+    padding: 5px 8px 4px 8px;
+    margin: 2px; 
+    border: #ccc 1px solid;
+    color: #999;
+    text-decoration: none;
+}
+.board_list_n_menu a:hover{
+    border:#999 1px solid;
+    color: #666;
+}
+.board_list_n_menu a:active{
+    border: #999 1px solid;
+    color: #666;
+}
+.board_list_n_menu .board_current{
+    border: #117bff 1px solid;
+    padding:5px 8px 4px 8px;
+    font-weight: bold;
+    margin: 2px;
+    color: #036cb4;
+}
+.board_.list_n_menu .board_disabled{
+    border: #eee 1px solid;
+    padding:5px 8px 4px 8px;
+    margin: 2px;
+    color: #ddd;
+}
+
+.board_search{
+  text-align: center;
+  margin:30px auto; 
+  height:50px;
+
+}
