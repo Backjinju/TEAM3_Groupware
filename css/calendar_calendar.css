@@ -1,12 +1,21 @@
 /* 220818 성선규 초기 작업 시작 */
 /* 220819 성선규 전날 작업물 50% 삭제 후 재시작 */
-*{
+* {
     /* border: 1px solid red; */
+    font-family: 'BBTreeGR';
 }
-.calendar_main_section{
+@font-face {
+    font-family: 'BBTreeGR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.calendar_main_section {
     height: 80vh;
 }
-.content_box{
+
+.content_box {
     height: 80px;
     width: 1445px;
     font-size: 2rem;
@@ -17,7 +26,8 @@
     position: fixed;
     background-color: white;
 }
-.calendar_sidebar{
+
+.calendar_sidebar {
     width: 250px;
     height: 825px;
     background-color: rgb(220, 222, 233);
@@ -28,87 +38,101 @@
     margin-top: 80px;
 }
 
-/* 일정 */
-.list_header{
+/* ========================================== 사이드 바 상단 ========================================== */
+.list_header {
     padding: 10px 0px 0px 20px;
 }
-.list_header > span{
+
+.list_header>span {
     font-size: 0.9rem;
     font-weight: bolder;
     color: gray;
 }
 
-.my_calendar_list > ul{
+.my_calendar_list>ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-.my_calendar_list > ul > li{
+
+.my_calendar_list>ul>li {
     margin: 3px 0 3px 0;
     font-weight: 600
 }
 
 /* 일정 버튼 */
-#my_calendar_list_2{
+#my_calendar_list_2 {
     accent-color: red;
 }
-#my_calendar_list_3{
+
+#my_calendar_list_3 {
     accent-color: rgb(194, 136, 30);
 }
-#my_calendar_list_4{
+
+#my_calendar_list_4 {
     accent-color: rgb(41, 170, 12);
 }
-#my_calendar_list_5{
+
+#my_calendar_list_5 {
     accent-color: rgb(165, 17, 176);
 }
-#Etc_calendar_list_1{
+
+#Etc_calendar_list_1 {
     accent-color: gray;
 }
-#Etc_calendar_list_2{
+
+#Etc_calendar_list_2 {
     accent-color: rgb(79, 148, 238);
 }
 
-/* 사이드 바 하단 미니 달력 박스*/
-.mini_calendar{
+/* ========================================== 사이드 바 하단 미니 달력 ========================================== */
+.mini_calendar {
     border-top: 1px solid rgba(128, 128, 128, 0.25);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 14.5px 10px;
+    user-select: none;
 }
 
 /* 사이드 바 하단 미니 달력 년월 */
-.mini_calendar_month{
+.mini_calendar_month {
     display: flex;
     justify-content: space-between;
     width: 230px;
 }
-.mini_calendar_month > div:nth-child(1),
-.mini_calendar_month > div:nth-child(3){
+
+.mini_calendar_month>div:nth-child(1),
+.mini_calendar_month>div:nth-child(3) {
     width: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.mini_calendar_month > div:nth-child(2){
+
+.mini_calendar_month>div:nth-child(2) {
     font-weight: 600;
 }
 
 /* 사이드 바 하단 미니 달력 */
-.mini_calendar_main{
+.mini_calendar_main {
     width: 250px;
     display: flex;
     justify-content: center;
 }
-.mini_calendar_main td{
+
+.mini_calendar_main td {
     width: 33px;
     height: 25px;
 }
-.mini_calendar_main td:not(.mini_calendar_main > tr:nth-child(1)) div:hover{
-    background-color: rgb(232, 232, 236);
+
+.mini_calendar_main tr:not(.weekday) td div:not(.mini_calendar_today):hover {
+    background-color: rgba(133, 133, 133, 0.4);
+    cursor: pointer;
 }
-.mini_calendar_main td > div{
+
+.mini_calendar_main td>div {
     width: 25px;
     height: 25px;
     border: none;
@@ -120,21 +144,23 @@
 }
 
 /* 현재 일자 */
-.mini_calendar_today{
+.mini_calendar_today {
     color: white;
     background-color: rgb(198, 54, 54);
 }
+
 /* 이번달에 포함되지 않는 일자 */
-.not_included{
+.not_included {
     color: rgba(142, 142, 142, 0.7);
 }
+
 /* 이번달에 포함되는 일자 */
-.month_in_day{
+.month_in_day {
     font-weight: 600;
 }
 
 /* 메인 캘린더 */
-.main_calendar_section{
+.main_calendar_section {
     position: absolute;
     top: 78px;
     left: 475px;
@@ -143,58 +169,62 @@
 }
 
 /* 메인 캘린더 상단 일, 주, 월, 년 버튼 */
-.main_calendar_section > div:nth-child(1){
+.main_calendar_section>div:nth-child(1) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(245, 245, 249);
 }
-.day_week_month_year{
+
+.day_week_month {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 260px;
+    width: 196px;
     height: 35px;
     background-color: rgb(245, 245, 249);
     border-radius: 4px;
+    font-size: 0.8rem;
 }
-.day_week_month_year > div{
+
+.day_week_month>div {
     width: 65px;
     height: 20px;
     line-height: 20px;
     display: flex;
     justify-content: center;
-    border: 1px solid rgb(215, 215, 218);
+    border: 1px solid rgba(215, 215, 218, 0.5);
     border-collapse: collapse;
 }
-.day_week_month_year div:hover{
+
+.day_week_month div:hover {
     cursor: pointer;
     background-color: rgb(232, 232, 236);
 }
+
 /* 일 */
-.day_week_month_year > div:nth-child(1){
+.day_week_month>div:nth-child(1) {
     border-radius: 4px 0px 0px 4px;
 }
+
 /* 주 */
-.day_week_month_year > div:nth-child(2){
-    border-left: 1px solid rgba(128, 128, 128, 0.5);
-    border-right: 1px solid rgba(128, 128, 128, 0.5);
+.day_week_month>div:nth-child(2) {
+    border-left: 1px solid rgba(128, 128, 128, 0.1);
+    border-right: 1px solid rgba(128, 128, 128, 0.1);
 }
+
 /* 월 */
-.day_week_month_year > div:nth-child(3){
+.day_week_month>div:nth-child(3) {
     background-color: rgb(232, 232, 236);
-}
-/* 년 */
-.day_week_month_year > div:nth-child(4){
     border-radius: 0px 4px 4px 0px;
-    border-left: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 /* 상단 검색 */
-.main_calendar_search_container > div{
+.main_calendar_search_container>div {
     position: relative;
 }
-.main_calendar_search_container input{
+
+.main_calendar_search_container input {
     background-color: rgb(245, 245, 249);
     border: 1px solid rgb(215, 215, 218);
     border-radius: 7px;
@@ -202,36 +232,40 @@
     margin-right: 10px;
     padding: 10px 0px 10px 15px;
 }
-.main_calendar_search_container input ~ label{
+
+.main_calendar_search_container input~label {
     position: absolute;
     right: 120px;
     opacity: 0.3;
 }
-.main_calendar_search_container input:focus ~ label{
+
+.main_calendar_search_container input:focus~label {
     opacity: 0;
     transition: all 0.3s;
 }
 
 /* 메인 달력 년, 월 */
-.main_calendar_section > div:nth-child(2){
+.main_calendar_section>div:nth-child(2) {
     display: flex;
     justify-content: space-between;
 }
-.main_calendar_year_month{
+
+.main_calendar_year_month {
     font-size: 2rem;
     font-weight: 900;
     padding: 5px 0px 0px 15px;
 }
 
 /* 메인 달력 달력 넘기기 및 오늘 일자 찾기 */
-.before_after_today_btn_container{
+.before_after_today_btn_container {
     display: flex;
     width: 120px;
     height: 30px;
     margin: 10px 15px 0px 0px;
     justify-content: space-between;
 }
-.before_after_today_btn_container > div{
+
+.before_after_today_btn_container>div {
     border: 1px solid rgba(128, 128, 128, 0.25);
     border-radius: 8px;
     display: flex;
@@ -239,66 +273,490 @@
     justify-content: center;
     box-shadow: 0 1px 1px 0px rgba(128, 128, 128, 0.451);
 }
-.before_after_today_btn_container > div:nth-child(1),
-.before_after_today_btn_container > div:nth-child(3){
+
+.before_after_today_btn_container>div:nth-child(1),
+.before_after_today_btn_container>div:nth-child(3) {
     width: 30px;
 }
-.before_after_today_btn_container > div:nth-child(2){
+
+.before_after_today_btn_container>div:nth-child(2) {
     width: 60px;
     font-weight: 600;
 }
 
-/* 메인 달력 */
-.main_calendar_section > div:nth-child(3){
+/* ========================================== 월 달력 ========================================== */
+.main_calendar_section>div:nth-child(3) {
     height: 100%;
     width: 1445px;
 }
 
-.main_calendar_table{
+.main_calendar_table {
     width: 1445px;
 }
-.main_calendar_table tr td{
+
+.main_calendar_table tr td {
     border-bottom: 1px solid rgba(202, 202, 202, 0.5);
     border-right: 1px solid rgba(202, 202, 202, 0.5);
     border-collapse: collapse;
 }
+
 .main_calendar_table,
 .main_calendar_table tr,
-.main_calendar_table tr td{
+.main_calendar_table tr td {
     margin: 0;
     padding: 0;
 }
-.main_calendar_table tr:nth-child(1) td{
+
+.main_calendar_table tr:nth-child(1) td {
     border-right: none;
     border-bottom: 1px solid gray;
 }
-.main_calendar_table tr td div:nth-child(1){
+
+.main_calendar_table tr td div:nth-child(1) {
     width: 202px;
     display: flex;
     justify-content: end;
     align-items: center;
 }
-.main_calendar_table tr td div:nth-child(2){
+
+.main_calendar_table tr td div:nth-child(2) {
     height: 92.5px;
 }
-.main_calendar_table tr td div span{
+
+.main_calendar_table tr td div span {
     margin: 5px 5px 0 0;
 }
 
 /* 주말 색상 변경 */
-.main_calendar_weekend{
+.main_calendar_weekend {
     background-color: rgb(245, 245, 249);
 }
-.main_calendar_weekend_week{
+
+.main_calendar_weekend_week {
     color: gray;
 }
 
 /* 평일 폰트 두껍게 */
-.main_calendar_weekday{
+.main_calendar_weekday {
     font-weight: 600;
 }
 
-.main_calendar_table td:hover{
+.main_calendar_table tr:not(.weekday) td:hover {
     cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.2);
+}
+
+
+/* 220822 성선규 */
+/* ========================================== 일 달력 ========================================== */
+.calendar_day_calendar_container {
+    padding: 0px 13px 0px 13px;
+}
+
+/* 요일 */
+.calendar_day_calendar_day_of_week {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+    padding-bottom: 5px;
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+/* 하루 종일 버튼 */
+.calendar_day_calendar_all_time {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    color: rgba(128, 128, 128, 0.8);
+    font-size: 0.8rem;
+    padding-left: 10px;
+    width: 1000px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+}
+
+/* 시간 */
+.calendar_day_calendar_time_container {
+    color: rgba(128, 128, 128, 0.8);
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+    height: 70vh;
+    width: 1000px;
+    font-size: 0.8rem;
+    padding-left: 10px;
+}
+
+.calendar_day_calendar_time_container>div {
+    padding-right: 5px;
+}
+
+.calendar_day_calendar_time_container>div:first-child>div {
+    padding: 31px 0px;
+}
+
+/* 스크롤바 커스텀 */
+.calendar_day_calendar_time_container::-webkit-scrollbar {
+    width: 5px;
+    /* 스크롤바의 너비 */
+}
+
+.calendar_day_calendar_time_container::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: rgb(172, 172, 172);
+    /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+.calendar_day_calendar_time_container::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+    /*스크롤바 뒷 배경 색상*/
+}
+
+.calendar_day_calendar_time_container>div:nth-child(2) {
+    margin-top: 39.5px;
+}
+
+.calendar_day_calendar_time_container>div:nth-child(2)>div {
+    width: 910px;
+    height: 79px;
+    border-top: 0.1px solid rgba(128, 128, 128, 0.1);
+    border-bottom: 0.1px solid rgba(128, 128, 128, 0.1);
+    border-collapse: collapse;
+}
+
+/* 오른쪽 사이드 바 */
+.calendar_day_calendar_right_side_bar {
+    border: 1px solid red;
+    width: 420px;
+    height: 100px;
+}
+
+.calendar_day_calendar_container>div:nth-child(3) {
+    display: flex;
+}
+
+/* ========================================== 주 달력 ========================================== */
+.calendar_week_calendar_week {
+    display: flex;
+    margin-left: 72px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.calendar_week_calendar_week>div {
+    border-collapse: collapse;
+    width: 195.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.calendar_week_calendar_week>div:first-child,
+.calendar_week_calendar_week>div:last-child {
+    color: gray;
+}
+
+.calendar_week_calendar_time_container {
+    color: rgba(128, 128, 128, 0.8);
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+    height: 72.5vh;
+    width: 1445px;
+    font-size: 0.8rem;
+    padding-left: 10px;
+}
+
+.calendar_week_calendar_time_container>div:first-child {
+    padding-right: 5px;
+}
+
+.calendar_week_calendar_time_container>div:first-child>div {
+    padding: 31px 0px;
+}
+
+/* 스크롤바 커스텀 */
+.calendar_week_calendar_time_container::-webkit-scrollbar {
+    width: 5px;
+    /* 스크롤바의 너비 */
+}
+
+.calendar_week_calendar_time_container::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: rgb(172, 172, 172);
+    /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+.calendar_week_calendar_time_container::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+    /*스크롤바 뒷 배경 색상*/
+}
+
+.calendar_week_calendar_sunday,
+.calendar_week_calendar_monday,
+.calendar_week_calendar_tuesday,
+.calendar_week_calendar_wednesday,
+.calendar_week_calendar_thursday,
+.calendar_week_calendar_friday,
+.calendar_week_calendar_saturday {
+    margin-top: 39.5px;
+    height: 1900px;
+}
+
+.calendar_week_calendar_sunday>div,
+.calendar_week_calendar_monday>div,
+.calendar_week_calendar_tuesday>div,
+.calendar_week_calendar_wednesday>div,
+.calendar_week_calendar_thursday>div,
+.calendar_week_calendar_friday>div,
+.calendar_week_calendar_saturday>div {
+    width: 195px;
+    height: 79px;
+    border-top: 1px solid rgba(128, 128, 128, 0.1);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+    border-right: 1px solid rgba(128, 128, 128, 0.1);
+    border-collapse: collapse;
+}
+
+.calendar_week_calendar_sunday,
+.calendar_week_calendar_saturday {
+    background-color: rgba(245, 245, 245, 1);
+}
+
+/* ========================================== 클릭 시 이벤트 설정 모달 나오기 ========================================== */
+/* 일정 색상 선택 */
+.arrow_arrow {
+    position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    width: 300px;
+    background-color: rgb(234, 234, 237);
+    border-radius: 7px;
+    box-shadow: 0 5px 15px 3px rgba(128, 128, 128, 0.3);
+}
+
+.arrow_arrow>div:first-child {
+    position: absolute;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+    border-left: 1px solid rgba(128, 128, 128, 0.4);
+    background-color: rgb(234, 234, 237);
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg) translateX(-15px);
+    top: 50%;
+}
+.arrow_arrow > div:nth-child(2){
+    padding: 15px;
+}
+.arrow_title_or_color_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.back_ground_color_container {
+    display: flex;
+    align-items: center;
+    background-color: rgb(190, 190, 193);
+    width: 40px;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+
+.back_ground_color_container>div:first-child {
+    width: 13px;
+    height: 13px;
+    background-color: red;
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+.back_ground_color_container>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 12px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+}
+
+.back_ground_color_container>div:nth-child(2)>div {
+    height: 10px;
+    width: 10px;
+    font-size: 0.7rem;
+    font-weight: bolder;
+}
+
+/* 일정 제목 */
+.arrow_title_or_color_container > input{
+    background-color: rgb(234, 234, 237);
+    border: none;
+    width: 210px;
+    font-size: 1.2rem;
+}
+.arrow_title_or_color_container > input:focus{
+    outline: none;
+}
+
+
+/* 색상 선택 */
+.arrow_title_or_color_container>ul {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 7px;
+    box-shadow: 0 5px 15px 3px rgba(128, 128, 128, 0.3);
+    background-color: rgb(234, 234, 237);
+    top: -250%;
+    right: -12%;
+}
+
+.arrow_title_or_color_container>ul>li {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.arrow_title_or_color_container>ul>li:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.arrow_title_or_color_container>ul>li>div {
+    margin-right: 5px;
+}
+
+.arrow_title_or_color_container>ul>li:nth-child(1)>div {
+    width: 13px;
+    height: 13px;
+    background-color: rgb(13, 110, 253);
+}
+
+.arrow_title_or_color_container>ul>li:nth-child(2)>div {
+    width: 13px;
+    height: 13px;
+    background-color: red;
+}
+
+.arrow_title_or_color_container>ul>li:nth-child(3)>div {
+    width: 13px;
+    height: 13px;
+    background-color: rgb(194, 136, 30);
+}
+
+.arrow_title_or_color_container>ul>li:nth-child(4)>div {
+    width: 13px;
+    height: 13px;
+    background-color: rgb(41, 170, 12);
+}
+
+.arrow_title_or_color_container>ul>li:nth-child(5)>div {
+    width: 13px;
+    height: 13px;
+    background-color: rgb(165, 17, 176);
+}
+
+/* 일정 시간 설정 버튼 */
+.arrow_datetime_container{
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+
+    /* margin: 15px 0; */
+    /* width: 298px; */
+    /* transform: translateX(-14.7px); */
+}
+.arrow_datetime_container > div{
+    height: 90px;
+    background-color: rgb(226, 226, 230);
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.arrow_datetime{
+    color: rgb(109, 109, 109);
+}
+.arrow_datetime_container > div > div:not(.arrow_datetime_alarm){
+    display: flex;
+    margin-left: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow_datetime_container > div > div > input{
+    width: 180px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.arrow_datetime_container > div > div > span{
+    color: rgb(79, 79, 79);
+}
+.arrow_datetime_container > div > div > div:hover{
+    border-radius: 2px;
+    background-color: rgba(128, 128, 128, 0.3);
+    cursor: pointer;
+}
+.arrow_datetime_alarm{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+.arrow_datetime_alarm > div{
+    margin-left: 18px;
+}
+
+/* 알람 설정 메모 */
+.arrow_memo > textarea{
+    background-color: rgb(234, 234, 237);
+    border: none;
+    width: 268px;
+    resize: none;
+    font-size: 1rem;
+    height: 21.5px;
+    
+}
+.arrow_memo > textarea:focus{
+    outline: none;
+}
+.arrow_memo > textarea::placeholder{
+    color: gray;
+}
+/* 스크롤바 커스텀 */
+.arrow_memo > textarea::-webkit-scrollbar {
+    width: 5px;
+    /* 스크롤바의 너비 */
+}
+
+.arrow_memo > textarea::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: rgb(172, 172, 172);
+    /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+.arrow_memo > textarea::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+    /*스크롤바 뒷 배경 색상*/
 }

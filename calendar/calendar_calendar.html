@@ -20,8 +20,8 @@
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="../home.html">JaeHee</a>
         <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
+        <!-- <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button> -->
         <!-- Navbar Search-->
         <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
@@ -88,7 +88,7 @@
                                 <a class="nav-link" href="../EDMS/EDMS_Temporary_box.html">임시보관함</a>
                                 <a class="nav-link" href="../EDMS/EDMS_wait.html">결재대기중</a>
                                 <a class="nav-link" href="../EDMS/EDMS_ing.html">진행중문서</a>
-                                <a class="nav-link" href="../EDMS/EDMS_end.html">완료문서</a>                    
+                                <a class="nav-link" href="../EDMS/EDMS_end.html">완료문서</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -105,9 +105,9 @@
                                 <a class="nav-link" href="../worktime/worktime_wait.html">승인대기중</a>
                                 <a class="nav-link" href="../worktime/worktime_ing.html">진행중문서</a>
                                 <a class="nav-link" href="../worktime/worktime_end.html">완료문서</a>
-                                <a class="nav-link" href="../worktime/worktime_view.html">출퇴근현황</a>                            
+                                <a class="nav-link" href="../worktime/worktime_view.html">출퇴근현황</a>
                             </nav>
-                         </div>
+                        </div>
                         <a class="nav-link" href="../todo/todo.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             ToDo+
@@ -162,7 +162,7 @@
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../address/address_all.html">전사 주소록</a>
-                                <a class="nav-link" href="../address/address_personal.html">개인 주소록</a>                                
+                                <a class="nav-link" href="../address/address_personal.html">개인 주소록</a>
                             </nav>
                         </div>
                         <a class="nav-link" href="../office_map/office_map.html">
@@ -283,7 +283,7 @@
                     </div>
                     <div class="mini_calendar_main">
                         <table>
-                            <tr>
+                            <tr class="weekday">
                                 <td>
                                     <div>
                                         <span>일</span>
@@ -550,7 +550,7 @@
                 <!-- 상단 -->
                 <div>
                     <div></div>
-                    <div class="day_week_month_year">
+                    <div class="day_week_month">
                         <div>
                             <span>
                                 일
@@ -564,11 +564,6 @@
                         <div>
                             <span>
                                 월
-                            </span>
-                        </div>
-                        <div>
-                            <span>
-                                년
                             </span>
                         </div>
                     </div>
@@ -606,10 +601,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- 메인 달력 -->
-                <div>
+
+                <!-- ========================================= 메인 월 달력 =============================================== -->
+                <!-- <div>
                     <table class="main_calendar_table">
-                        <tr>
+                        <tr class="weekday">
                             <td class="main_calendar_weekend_week">
                                 <div>
                                     <span>일</span>
@@ -911,12 +907,979 @@
                             </td>
                         </tr>
                     </table>
+                </div> -->
+
+                <!-- ========================================= 메인 일 달력 =============================================== -->
+                <!-- 메인 일 달력 -->
+                <!-- <div class="calendar_day_calendar_container">
+                    <div class="calendar_day_calendar_day_of_week">
+                        <span>
+                            화요일
+                        </span>
+                    </div>
+                    <div class="calendar_day_calendar_all_time">
+                        <div>
+                            <span>
+                                하루 종일
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="calendar_day_calendar_time_container">
+                            <div>
+                                <div class="calendar_day_calendar_am_0">
+                                    <span>
+                                        오전 0시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_1">
+                                    <span>
+                                        오전 1시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_2">
+                                    <span>
+                                        오전 2시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_3">
+                                    <span>
+                                        오전 3시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_4">
+                                    <span>
+                                        오전 4시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_5">
+                                    <span>
+                                        오전 5시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_6">
+                                    <span>
+                                        오전 6시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_7">
+                                    <span>
+                                        오전 7시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_8">
+                                    <span>
+                                        오전 8시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_9">
+                                    <span>
+                                        오전 9시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_10">
+                                    <span>
+                                        오전 10시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_11">
+                                    <span>
+                                        오전 11시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_12">
+                                    <span>
+                                        오후 12시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_1">
+                                    <span>
+                                        오후 1시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_2">
+                                    <span>
+                                        오후 2시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_3">
+                                    <span>
+                                        오후 3시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_4">
+                                    <span>
+                                        오후 4시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_5">
+                                    <span>
+                                        오후 5시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_6">
+                                    <span>
+                                        오후 6시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_7">
+                                    <span>
+                                        오후 7시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_8">
+                                    <span>
+                                        오후 8시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_9">
+                                    <span>
+                                        오후 9시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_10">
+                                    <span>
+                                        오후 10시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_pm_11">
+                                    <span>
+                                        오후 11시
+                                    </span>
+                                </div>
+                                <div class="calendar_day_calendar_am_12">
+                                    <span>
+                                        오후 12시
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="calendar_day_calendar_am_0_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_1_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_2_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_3_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_4_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_5_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_6_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_7_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_8_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_9_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_10_box">
+                                </div>
+                                <div class="calendar_day_calendar_am_11_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_12_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_1_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_2_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_3_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_4_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_5_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_6_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_7_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_8_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_9_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_10_box">
+                                </div>
+                                <div class="calendar_day_calendar_pm_11_box">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar_day_calendar_right_side_bar">
+                            
+                        </div>
+                    </div>
+                </div> -->
+                <!-- ========================================= 메인 주 달력 =============================================== -->
+                <!-- <div>
+                    <div>
+                        <div class="calendar_week_calendar_week">
+                            <div>
+                                <span>
+                                    30일 (일)
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    31일 (토)
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    1일 (화)
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    2일 (수)
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    3일 (목)
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    4일 (금)
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    5일 (토)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="calendar_week_calendar_time_container">
+                            <div>
+                                <div class="calendar_week_calendar_am_0">
+                                    <span>
+                                        오전 0시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_1">
+                                    <span>
+                                        오전 1시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_2">
+                                    <span>
+                                        오전 2시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_3">
+                                    <span>
+                                        오전 3시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_4">
+                                    <span>
+                                        오전 4시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_5">
+                                    <span>
+                                        오전 5시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_6">
+                                    <span>
+                                        오전 6시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_7">
+                                    <span>
+                                        오전 7시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_8">
+                                    <span>
+                                        오전 8시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_9">
+                                    <span>
+                                        오전 9시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_10">
+                                    <span>
+                                        오전 10시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_11">
+                                    <span>
+                                        오전 11시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_12">
+                                    <span>
+                                        오후 12시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_1">
+                                    <span>
+                                        오후 1시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_2">
+                                    <span>
+                                        오후 2시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_3">
+                                    <span>
+                                        오후 3시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_4">
+                                    <span>
+                                        오후 4시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_5">
+                                    <span>
+                                        오후 5시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_6">
+                                    <span>
+                                        오후 6시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_7">
+                                    <span>
+                                        오후 7시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_8">
+                                    <span>
+                                        오후 8시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_9">
+                                    <span>
+                                        오후 9시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_10">
+                                    <span>
+                                        오후 10시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_pm_11">
+                                    <span>
+                                        오후 11시
+                                    </span>
+                                </div>
+                                <div class="calendar_week_calendar_am_12">
+                                    <span>
+                                        오후 12시
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="calendar_week_calendar_sunday">
+                                <div class="calendar_week_calendar_am_0_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_11_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_12_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_11_box">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="calendar_week_calendar_monday">
+                                <div class="calendar_week_calendar_am_0_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_11_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_12_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_11_box">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="calendar_week_calendar_tuesday">
+                                <div class="calendar_week_calendar_am_0_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_11_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_12_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_11_box">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="calendar_week_calendar_wednesday">
+                                <div class="calendar_week_calendar_am_0_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_11_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_12_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_11_box">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="calendar_week_calendar_thursday">
+                                <div class="calendar_week_calendar_am_0_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_11_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_12_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_11_box">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="calendar_week_calendar_friday">
+                                <div class="calendar_week_calendar_am_0_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_11_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_12_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_11_box">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="calendar_week_calendar_saturday">
+                                <div class="calendar_week_calendar_am_0_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_am_11_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_12_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_1_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_2_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_3_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_4_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_5_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_6_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_7_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_8_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_9_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_10_box">
+                                    <div></div>
+                                </div>
+                                <div class="calendar_week_calendar_pm_11_box">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div>
+                    <div>
+                        <div class="arrow_arrow">
+                            <div></div>
+                            <div>
+                                <div class="arrow_title_or_color_container">
+                                    <input type="text" placeholder="새로운 이벤트">
+                                    <div class="back_ground_color_container">
+                                        <div></div>
+                                        <div>
+                                            <div>
+                                                <i class="fa-solid fa-chevron-up"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div></div>
+                                            <span>집</span>
+                                        </li>
+                                        <li>
+                                            <div></div>
+                                            <span>직장</span>
+                                        </li>
+                                        <li>
+                                            <div></div>
+                                            <span>약속</span>
+                                        </li>
+                                        <li>
+                                            <div></div>
+                                            <span>할일</span>
+                                        </li>
+                                        <li>
+                                            <div></div>
+                                            <span>생일</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="arrow_datetime_container">
+                                    <span class="arrow_datetime">
+                                        시간 설정
+                                    </span>
+                                    <div>
+                                        <div>
+                                            <span>
+                                                시작:
+                                            </span>
+                                            <input type="datetime-local">
+                                        </div>
+                                        <div>
+                                            <span>
+                                                종료:
+                                            </span>
+                                            <input type="datetime-local">
+                                        </div>
+                                        <div class="arrow_datetime_alarm">
+                                            <span>
+                                                알림:
+                                            </span>
+                                            <div>
+                                                없음
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="arrow_memo">
+                                    <textarea name="" id="" cols="35" placeholder="메모"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/scripts.js"></script>
     <script src="calendar_calendar.html"></script>
 </body>
