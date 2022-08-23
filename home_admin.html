@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>JaeHee Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="home.html">JaeHee</a>
+        <!-- 22/08/21 토글박스 삭제  -->
+        <!-- Sidebar Toggle-->
+        <!-- <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button> -->
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                    aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="mypage.html">기본정보</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link" href="home.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Home
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_message"
+                            aria-expanded="false" aria-controls="collapse_message">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            쪽지
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapse_message" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="message/message_write.html">쪽지쓰기</a>
+                                <a class="nav-link" href="message/message_receive.html">받은쪽지함</a>
+                                <a class="nav-link" href="message/message_send.html">보낸쪽지함</a>
+                                <a class="nav-link" href="message/message_important.html">중요쪽지함</a>
+                                <a class="nav-link" href="message/message_temp.html">임시보관함</a>
+                                <a class="nav-link" href="message/message_reserved.html">예약쪽지함</a>
+                                <a class="nav-link" href="message/message_trash.html">휴지통</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collaps_address"
+                            aria-expanded="false" aria-controls="collapse_address">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            관리자메뉴
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collaps_address" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="">전자결재관리</a>
+                                <a class="nav-link" href="">근태관리</a>    
+                                <a class="nav-link" href="">예약관리</a>                                
+                                <a class="nav-link" href="">게시글관리</a>                                
+                                <a class="nav-link" href="">주소록관리</a>                                
+                                <a class="nav-link" href="">조직도관리</a>                                
+                                <a class="nav-link" href="">인사기록카드</a>                                
+                                <a class="nav-link" href="">접속내역확인</a>                                
+                                <a class="nav-link" href="">권한관리</a>                                
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Start Bootstrap
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <div id="home_content_container">
+                <div class="home_content homebox1">
+                    <div class="home_personal_info">
+                        <br>
+                        <br>
+                        <div class="home_personal_img"></div>
+                        <div class="home_personal_text">
+                            <br>
+                            <h1 class="home_personal_name">관리자1</h1>
+                            <p class="home_personal_company">(주)JaeHee</p>
+                        </div>
+                        <!-- <div class="home_EDMS_docu">
+                            <p class="home_EDMS_docu_text">결제할 문서 <span class="home_EDMS_docu_round">10</span></p>
+                            <p class="home_EDMS_docu_text">오늘의 일정 <span class="home_EDMS_docu_round">0</span></p>
+                        </div> -->
+                    </div>
+                    <div class="home_personal_insert_info">
+                        <button class="home_meg_write">쪽지쓰기</button>
+                        <!-- <button class="home_contact">연락처 추가</button>
+                        <button class="home_calendar">일정등록</button> -->
+                        <button class="home_board_write">게시글 작성</button>
+                    </div>
+                </div>
+                <div class="home_content homebox2">
+                    <div>
+                        <h1 class="home_content_title">전사게시판 최근글</h1>
+                        <div class="tabmenu">
+                            <ul class="tabmenu_list">               
+                                <li id="tab1" class="btnCon"><input type="radio" checked name="tabmenu" id="tabmenu1" >               
+                                    <label for="tabmenu1">전체</label>
+                                    <div class="tabCon">
+                                        <table>
+                                            <tr>
+                                                <td><p class="home_board_title">인사이동</p>
+                                                <span class="home_board_info">2022-08-21 | 오슬기 부장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">안녕하세요</p>
+                                                <span class="home_board_info">2022-08-19 | 송혜교 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">답변</p>
+                                                <span class="home_board_info">2022-08-13 | 장동건 대리</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">8월 일정을 공유합니다</p>
+                                                <span class="home_board_info">2022-08-02 | 성선규 차장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">IT 사원 인사이동의 건입니다.</p>
+                                                <span class="home_board_info">2022-07-17 | 김혜수 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">부고 소식입니다.</p>
+                                                <span class="home_board_info">2022-07-17 | 전지현 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">전체 사원들에게 알려드립니다.</p>
+                                                <span class="home_board_info">2022-07-03 | 이은지 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">7월 일정</p>
+                                                <span class="home_board_info">2022-07-03 | 박예솔 대리</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">인사이동 공지(필독!)</p>
+                                                <span class="home_board_info">2022-07-02 | 김민아 사원</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">안녕하세요</p>
+                                                <span class="home_board_info">2022-07-01 | 홍수빈 사원</span></td>                                                
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li id="tab2" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu2">
+                                    <label for="tabmenu2">전체공지</label>
+                                    <div class="tabCon">
+                                        <table>
+                                            <tr>
+                                                <td><p class="home_board_title">인사이동</p>
+                                                <span class="home_board_info">2022-08-21 | 오슬기 부장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">안녕하세요</p>
+                                                <span class="home_board_info">2022-08-19 | 송혜교 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">부고 소식입니다.</p>
+                                                <span class="home_board_info">2022-07-17 | 전지현 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">전체 사원들에게 알려드립니다.</p>
+                                                <span class="home_board_info">2022-07-03 | 이은지 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">7월 일정</p>
+                                                <span class="home_board_info">2022-07-03 | 박예솔 대리</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">인사이동 공지(필독!)</p>
+                                                <span class="home_board_info">2022-07-02 | 김민아 사원</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">안녕하세요</p>
+                                                <span class="home_board_info">2022-07-01 | 홍수빈 사원</span></td>                                                
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li id="tab3" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu3">
+                                    <label for="tabmenu3">일반게시판</label>
+                                    <div class="tabCon">
+                                        <table>
+                                            <tr>
+                                                <td><p class="home_board_title">인사이동</p>
+                                                <span class="home_board_info">2022-08-21 | 오슬기 부장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">안녕하세요</p>
+                                                <span class="home_board_info">2022-08-19 | 송혜교 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">답변</p>
+                                                <span class="home_board_info">2022-08-13 | 장동건 대리</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">8월 일정을 공유합니다</p>
+                                                <span class="home_board_info">2022-08-02 | 성선규 차장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">전체 사원들에게 알려드립니다.</p>
+                                                <span class="home_board_info">2022-07-03 | 이은지 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">7월 일정</p>
+                                                <span class="home_board_info">2022-07-03 | 박예솔 대리</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">인사이동 공지(필독!)</p>
+                                                <span class="home_board_info">2022-07-02 | 김민아 사원</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">안녕하세요</p>
+                                                <span class="home_board_info">2022-07-01 | 홍수빈 사원</span></td>                                                
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li id="tab4" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu4">
+                                    <label for="tabmenu4">자료게시판</label>
+                                    <div class="tabCon">
+                                        <table>
+                                            <tr>
+                                                <td><p class="home_board_title">인사이동</p>
+                                                <span class="home_board_info">2022-08-21 | 오슬기 부장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">안녕하세요</p>
+                                                <span class="home_board_info">2022-08-19 | 송혜교 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">답변</p>
+                                                <span class="home_board_info">2022-08-13 | 장동건 대리</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">8월 일정을 공유합니다</p>
+                                                <span class="home_board_info">2022-08-02 | 성선규 차장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">IT 사원 인사이동의 건입니다.</p>
+                                                <span class="home_board_info">2022-07-17 | 김혜수 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">부고 소식입니다.</p>
+                                                <span class="home_board_info">2022-07-17 | 전지현 과장</span></td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p class="home_board_title">전체 사원들에게 알려드립니다.</p>
+                                                <span class="home_board_info">2022-07-03 | 이은지 과장</span></td>                                                
+                                            </tr>                                            
+                                        </table>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="home_content homebox3">
+                    <div class="home_recent_login">
+                        <h1 class="home_content_title">최근 로그인 정보</h1>
+                        <div class="home_todo_content">2022년 09월 26일(월)</div>
+                        <div class="home_todo_content">2022년 09월 26일(월)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
