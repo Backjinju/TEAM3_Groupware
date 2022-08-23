@@ -172,7 +172,41 @@
         <div id="layoutSidenav_content">
             <div class="content_box">
                 글쓰기
-            </div>    
+            </div>
+            <div id="board_write_container">                
+                <div class="board_write_insert_info">
+                    <table>
+                        <tr>
+                            <td class="board_td1">카테고리</td>
+                            <td class="board_td2"><select name="" id="board_select">
+                                <option value="">공지사항</option>
+                                <option value="">일반게시판</option>
+                                <option value="">자료실</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="board_td1">제목 <span><input type="checkbox" id="important">중요!</span></td>
+                            <td class="board_td2"><input type="text" id="" name=""></td>
+                        </tr>
+                        <tr>
+                            <td class="board_td1">작성자</td>
+                            <td class="board_td2"><input type="text" value="이은지" disabled ></td>
+                        </tr>
+                        <tr>
+                            <td class="board_td1">첨부파일</td>
+                            <td class="board_td2"><input type="file" value="파일선택"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="board_write_textarea">
+                    <h1>API 적용 예정</h1>
+                </div>
+                <div class="board_bottom_btn">
+                    <button>저장</button>
+                    <button>취소</button>
+                </div>
+            </div>
+
             
 
         </div>
