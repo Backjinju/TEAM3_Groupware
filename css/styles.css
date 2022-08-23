@@ -60,6 +60,9 @@ button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+button {
   cursor: pointer;
 }
 
@@ -536,9 +539,10 @@ button {
   padding-left: 1rem !important;
 }
 
+/* 22/08/22 상단 바 배경색 */
 .bg-dark {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgb(68, 142, 253);
 }
 
 html,
@@ -733,7 +737,7 @@ body {
 
 /* 22/08/21 사이드 배경 색상 */
 .sb-sidenav-dark {
-  background-color: #212529;
+  background-color: rgb(13, 110, 253);
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -743,7 +747,7 @@ body {
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.678);
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
@@ -768,5 +772,11 @@ body {
 
 /* 22/08/21 사이드 하단 색상 */
 .sb-sidenav-dark .sb-sidenav-footer {
-  background-color: #343a40;
+  background-color: rgba(57, 133, 247, 0.795);
+}
+
+@media screen and (max-width: 950px) {
+  body {
+      overflow-x: auto;
+  }
 }
