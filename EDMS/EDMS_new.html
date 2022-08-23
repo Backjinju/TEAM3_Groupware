@@ -10,6 +10,8 @@
     <title>JaeHee Group</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="EDMS_new.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -18,8 +20,8 @@
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="../home.html">JaeHee</a>
         <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
+        <!-- <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button> -->
         <!-- Navbar Search-->
         <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
@@ -170,8 +172,91 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
-            <div class="content_box" style="background-color: gray; height: 80px;">
-                80px
+            <div class="content_box">
+                새결재진행
+            </div>
+
+            <div class="basic_setting">
+               <p>기본설정</p>
+               <div class="table_box_fir">
+               <div class="basic_settint_docu_type">
+                  <table>
+                    <tr>
+                        <td class="table_bg">문서종류</td>
+                        <td><select name="type" id="type_select">
+                            <option value="choice">구분선택</option>
+                            <option value="general">일반품의서</option>
+                            <option value="money">비용품의서</option>
+                            <option value="certificate">증명서신청</option>
+                        </select>
+                        </td>
+                    </tr>
+                  </table>
+               </div>
+
+               <div>
+                   <table>
+                    <tr>
+                        <td class="table_bg">기안작성자</td>
+                        <td></td>
+                    </tr>
+                   </table>
+               </div>
+            </div>
+            </div>
+
+            <div class="basic_setting">
+                결재선 지정<button id="btn_bg">조직도검색</button>
+                <div class="table_box_sec">
+                    <table id="approval_info">
+                        <tr>
+                            <td class="table_bg table_size">구분</td>
+                            <td class="table_bg">중간결재자</td>
+                            <td class="table_bg">최종결재자</td>
+                        </tr>
+                        <tr>
+                            <td class="table_bg table_size">이름</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table_bg table_size">부서</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table_bg table_size">직급</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+              <div class="docu_input_box">
+                <p>상세입력</p>
+                <div class="table_box_thr">
+                <table class="input_table">
+                    <tr>
+                        <td>기안부서</td>
+                        <td></td>
+                        <td>기안일</td>
+                        <td></td>
+                        <td>부서번호</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>증명서종류</td>
+                        <td></td>
+                        <td>용도</td>
+                        <td></td>
+                        <td>제출처</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+              </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'BBTreeGR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.content_box{  
+    height: 80px;
+    width: 100%;
+    font-size: 2rem;
+    font-family: 'BBTreeGR';
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    }
+        
+.basic_setting{
+    border: 3px solid black;
+    font-weight: bold;
+    font-family: 'BBTreeGR';
+    padding: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.table_box_fir{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.basic_setting table tr td{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid rgb(224, 222, 222);
+}
+.table_bg{
+    background-color: rgb(202, 199, 199);
+}
+#type_select{
+     border: 0;
+}
+#type_select:focus{
+      outline: none;
+}
+.table_box_sec{
+    display: flex;
+    flex-direction: row;
+}
+.table_size{
+    width: 20% !important;
+}
+#btn_bg{
+    font-family: 'BBTreeGR';
+    font-weight: bold;
+    font-size: 0.9rem;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 15px;
+    background-color: white;
+    color: dimgray;
+    border: 2px solid dimgray;
+}
+#btn_bg:hover{
+    background-color:rgb(13, 110, 253);
+    border: 2px solid rgb(13, 110, 253);
+    color: white;
+    transition: 0.3s;
+}
+#approval_info{
+    margin-top : 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 145%;
+    height: 200px;
+}
+
+.docu_input_box{
+    border: 3px solid black;
+    font-weight: bold;
+    font-family: 'BBTreeGR';
+    padding: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.input_table{
+    width: 80%;
+}
+.table_box_thr{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+.input_table tr td{
+    border: 2px solid black;
+}
+

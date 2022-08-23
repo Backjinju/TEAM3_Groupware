@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'BBTreeGR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.content_box {  
+    height: 80px;
+    width: 100%;
+    font-size: 2rem;
+    font-family: 'BBTreeGR';
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    }
+        
