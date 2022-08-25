@@ -176,6 +176,7 @@
                 새결재진행
             </div>
 
+            <div class="EDMS_new_container">
             <div class="basic_setting">
                <p>기본설정</p>
                <div class="table_box_fir">
@@ -206,7 +207,7 @@
             </div>
 
             <div class="basic_setting">
-                결재선 지정<button id="btn_bg">조직도검색</button>
+                결재선 지정<input type="button" value="조직도검색" id="btn_bg">
                 <div class="table_box_sec">
                     <table id="approval_info">
                         <tr>
@@ -235,8 +236,17 @@
 
               <div class="docu_input_box">
                 <p>상세입력</p>
+                <div class="docu_input_icon">
+                    <i class="xi-file-download" title="EXCEL파일 다운로드"></i>
+                    <i class="xi-print" title="프린트"></i>
+                </div>
+
                 <div class="table_box_thr">
                 <table class="input_table">
+                    <tr class="input_table_size">
+                        <td>비용품의서</td>
+                        <td colspan="5"></td>
+                    </tr>
                     <tr>
                         <td>기안부서</td>
                         <td></td>
@@ -247,16 +257,27 @@
                     </tr>
                     <tr>
                         <td>증명서종류</td>
-                        <td></td>
+                        <td><input type="text"></td>
                         <td>용도</td>
-                        <td></td>
+                        <td><input type="text"></td>
                         <td>제출처</td>
-                        <td></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>제목</td>
+                        <td colspan="4"><input type="text"></td>
+                        <td>긴급 <div id="EDMS_new_impor">
+                             <div id="EDMS_new_impor_btn"></div>
+                        </div>
+                        </td>
                     </tr>
                 </table>
             </div>
-
+            <div class="EDMS_new_api">
+                API 적용 예정
+            </div>
               </div>
+            </div>
             </div>
         </div>
     </div>
