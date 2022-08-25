@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>JaeHee Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/message_write.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="/home_admin.html">JaeHee</a>
+        <!-- 22/08/21 토글박스 삭제  -->
+        <!-- Sidebar Toggle-->
+        <!-- <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button> -->
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                    aria-describedby="btnNavbarSearch"/>
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link" href="/home_admin.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Home
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_message"
+                            aria-expanded="false" aria-controls="collapse_message">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            쪽지
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapse_message" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="../admin/admin_message_write.html">쪽지쓰기</a>
+                                <a class="nav-link" href="../admin/admin_message_receive.html">받은쪽지함</a>
+                                <a class="nav-link" href="../admin/admin_message_send.html">보낸쪽지함</a>
+                                <a class="nav-link" href="../admin/admin_message_important.html">중요쪽지함</a>
+                                <a class="nav-link" href="../admin/admin_message_temp.html">임시보관함</a>
+                                <a class="nav-link" href="../admin/admin_message_reserved.html">예약쪽지함</a>
+                                <a class="nav-link" href="../admin/admin_message_trash.html">휴지통</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collaps_address"
+                            aria-expanded="false" aria-controls="collapse_address">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            관리자메뉴
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collaps_address" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="">전자결재관리</a>
+                                <a class="nav-link" href="">근태관리</a>    
+                                <a class="nav-link" href="">예약관리</a>                                
+                                <a class="nav-link" href="">게시글관리</a>                                
+                                <a class="nav-link" href="">주소록관리</a>                                
+                                <a class="nav-link" href="">조직도관리</a>                                
+                                <a class="nav-link" href="/admin/admin_personnel_card.html">인사기록카드</a>                                
+                                <a class="nav-link" href="">접속내역확인</a>                                
+                                <a class="nav-link" href="">권한관리</a>                                
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Start Bootstrap
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <div class="content_box">
+                쪽지쓰기
+            </div>
+            <div id="message_write_container">
+                <div class="top_btn">
+                    <button>보내기</button>
+                    <button>임시저장</button>
+                    <button>다시쓰기</button>
+                </div>
+                <div class="message_write_insert_info">
+                    <table>
+                        <tr>
+                            <td class="message_td1">받는사람</td>
+                            <td class="message_td2"><input type="text" placeholder="20220801"></td>
+                            <td class="message_td3"><button class="message_btn-open-popup">주소록</button></td>
+                        </tr>
+                        <tr>
+                            <td class="message_td1">제목 <span><input type="checkbox" id="important">중요!</span></td>
+                            <td class="message_td2"><input type="text" placeholder="untitle"></td>
+                        </tr>
+                        <tr>
+                            <td class="message_td1">작성자</td>
+                            <td class="message_td2"><input type="text" placeholder="unknown"></td>
+                        </tr>
+                        <tr>
+                            <td class="message_td1">첨부파일</td>
+                            <td class="message_td2"><input type="file" placeholder="파일선택"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="message_write_textarea">
+                    <h1>API 적용 예정</h1>
+                </div>
+                <div class="bottom_btn">
+                    <button>예약발송</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="message_modal">
+            <div class="message_modal_body">
+                <h1>쪽지쓰기 주소록</h1>
+                <div class="modal_container">
+                    <div class="dept">
+                        <ul>
+                            <li><a href="">경영지원</a></li>
+                            <li><a href="">영업</a></li>
+                            <li><a href="">인사</a></li>
+                            <li><a href="">IT</a></li>
+                            <li><a href="">마켓팅</a></li>
+                            <li><a href="">총무</a></li>
+                            <li><a href="">영업지원</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal_personal_info">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/message_write.js"></script>
+</body>
+
+</html>
