@@ -55,17 +55,17 @@
 }
 
 .admin_personnel_body .search span {
-    margin: 0 5px 0 10px;
-    font-size: 15px;
+    margin: 0 5px 0 5px;
+    font-size: .8rem;
 }
 
 .admin_personnel_body .search select,input {
     width: 100px;
-    margin-right: 20px;
+    margin-right: 10px;
     border: none;
     outline: none;
     border-bottom: 1px solid gray;
-    font-size: 15px;
+    font-size: .5rem;
     cursor: default;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .admin_personnel_body .office_map_btn {
-    width: 100px;
+    width: 80px;
     height: 30px;
     text-align: center;
     line-height: 30px;
@@ -125,7 +125,7 @@
 .admin_personnel_body .result .list {
     width: 30%;
     height: 650px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .admin_personnel_body .result .details {
@@ -135,7 +135,7 @@
 
 .admin_personnel_body .list table {
     width: 100%;
-    font-size: 10px;
+    font-size: 3px;
     
 }
 
@@ -143,7 +143,6 @@
     background-color: rgba(128, 128, 128, 0.111);
     height: 20px;
     font-size: 5px;
-    font-weight: bolder;
 } 
 
 .admin_personnel_body .list table tr:not(:first-child) {
@@ -155,14 +154,69 @@
 
 .admin_personnel_body .details {
     width: 100%;
+    height: 800px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
     border-left: 1px solid rgba(128, 128, 128, 0.236);
 }
 
-.admin_personnel_body .details .details_title {
+.admin_personnel_body .details .details_left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.admin_personnel_body .details .details_left .img_box{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.admin_personnel_body .details .details_left .modify_box{
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.admin_personnel_body .details .details_left .modify_box input{
+    width: 200px;
+}
+
+
+.admin_personnel_body .details .details_left .modify_box button{
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+}
+
+.admin_personnel_body .details .details_right {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.admin_personnel_body .details .box {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    margin: 10px;
+}
+
+.admin_personnel_body .details .box div {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.admin_personnel_body .details .box input {
+    width: 300px;
+} 
+
+/* .admin_personnel_body .details .details_title {
     width: 30%;
     height: 500px;
     display: flex;
@@ -191,6 +245,16 @@
     border: none;
     background-color: rgba(128, 128, 128, 0.147);
     border-radius: 3px;
+} */
+
+.admin_personnel_body .details_btn {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .admin_personnel_body .details button{
