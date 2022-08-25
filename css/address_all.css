@@ -8,26 +8,39 @@
 *
 {
     /* border: 1px solid royalblue; */
+    font-family: 'BBTreeGR';
+    font-weight: normal;
+    font-style: normal;
 }
-.section_address_title {
+
+@font-face {
+    font-family: 'BBTreeGR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff');
+   }
+
+.address_all_title_box {
     height: 80px;
     padding: 15px;
     border-bottom: 1px solid gray;
+    display: flex;
 
 }
 
-.all_address_title {
+.address_all_title {
     font-size: 2rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-.all_address_next {
+.address_all_next {
     padding: 10px;
     color: gray;
+    padding-top: 23px;
 }
 
 /* 주소록 검색 */
-.address_search {
+.address_all_search {
     display: flex;
     justify-content: space-between;
     margin: 20px 20px;
@@ -35,77 +48,72 @@
 }
 
 /* EXCEL 내보내기 */
-.excel_sendout {
+.address_all_excel_sendout {
     margin-left: 40px;
 }
 
 /* 자음별 검색 */
-.search_consonant {
+.address_all_search_consonant {
     margin-top: 10px;
     margin-left: 40px;
 }
 
 /* a링크 색 밑줄 제거 */
-a:link {
+.address_all_search_consonant > a:link , a:visited , a:hover , a:active{
     text-decoration: none;
     color: black;
 
 }
-
-a:visited {
+.address_all_excel_sendout > a:link , a:visited , a:hover , a:active{
     text-decoration: none;
     color: black;
 
 }
-
-a:hover {
+.address_all_page_num > a:link , a:visited , a:hover , a:active{
     text-decoration: none;
     color: black;
 
 }
-
-a:active {
+.address_all_table > tbody > tr > td > a:link , a:visited , a:hover , a:active{
     text-decoration: none;
     color: black;
 
 }
 
 /* 필드설정 */
-.field_set {
+.address_all_field_set {
     display: flex;
     justify-content: space-between;
 }
 
 /* 테이블 */
-.table_title {
+.address_all_table_title {
     background-color: rgb(13,110,253);
     color: white;
     /* border-top: 1px solid black;
     border-bottom: 1px solid black; */
 }
 
-td {
+.address_all_table > tbody > tr > td {
     padding: 10px 0;
 }
 
-th:first-child {
+
+.address_all_table > tbody > tr > td:first-child {
     padding-left: 15px;
 }
 
-td:first-child {
-    padding-left: 15px;
-}
 
 /* 하단 페이지 넘버 */
-.page_num_box {
+.address_all_page_num_box {
     display: flex;
     justify-content: center;
 }
 
-.page_num {
+.address_all_page_num {
     padding: 30px;
 }
 
-.page_num>a {
+.address_all_page_num>a {
     padding: 10px;
 }
