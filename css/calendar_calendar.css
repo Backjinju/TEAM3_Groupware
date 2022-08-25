@@ -41,6 +41,7 @@
 /* ========================================== 사이드 바 상단 ========================================== */
 .list_header {
     padding: 10px 0px 0px 20px;
+    user-select: none;
 }
 
 .list_header>span {
@@ -59,7 +60,10 @@
     margin: 3px 0 3px 0;
     font-weight: 600
 }
-
+.my_calendar_list>ul>li>div>input,
+.my_calendar_list>ul>li>div>input~label:hover{
+    cursor: pointer;
+}
 /* 일정 버튼 */
 #my_calendar_list_2 {
     accent-color: red;
@@ -161,8 +165,8 @@
 
 /* 메인 캘린더 */
 .main_calendar_section {
-    position: absolute;
-    top: 78px;
+    position: fixed;
+    top: 136px;
     left: 475px;
     width: 1445px;
     z-index: 100;
@@ -186,35 +190,43 @@
     border-radius: 4px;
     font-size: 0.8rem;
 }
-
-.day_week_month>div {
-    width: 65px;
+.day_week_month input[type=radio]{
+    display: none;
+}
+.day_week_month > div{
+    width: 196px;
     height: 20px;
     line-height: 20px;
     display: flex;
     justify-content: center;
     border: 1px solid rgba(215, 215, 218, 0.5);
     border-collapse: collapse;
+    border-radius: 4px;
 }
-
-.day_week_month div:hover {
+.day_week_month > div > label > div{
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.day_week_month > div > label > div:hover {
     cursor: pointer;
     background-color: rgb(232, 232, 236);
 }
 
 /* 일 */
-.day_week_month>div:nth-child(1) {
+#day_btn ~ label >  div {
     border-radius: 4px 0px 0px 4px;
 }
 
 /* 주 */
-.day_week_month>div:nth-child(2) {
+#week_btn ~ label >  div {
     border-left: 1px solid rgba(128, 128, 128, 0.1);
     border-right: 1px solid rgba(128, 128, 128, 0.1);
 }
 
 /* 월 */
-.day_week_month>div:nth-child(3) {
+#month_btn ~ label >  div {
     background-color: rgb(232, 232, 236);
     border-radius: 0px 4px 4px 0px;
 }
@@ -288,6 +300,7 @@
 .main_calendar_section>div:nth-child(3) {
     height: 100%;
     width: 1445px;
+    display: block;
 }
 
 .main_calendar_table {
@@ -313,14 +326,14 @@
 }
 
 .main_calendar_table tr td div:nth-child(1) {
-    width: 202px;
+    width: 206px;
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
 .main_calendar_table tr td div:nth-child(2) {
-    height: 92.5px;
+    height: 99.5px;
 }
 
 .main_calendar_table tr td div span {
@@ -340,16 +353,32 @@
 .main_calendar_weekday {
     font-weight: 600;
 }
-
-.main_calendar_table tr:not(.weekday) td:hover {
-    cursor: pointer;
+.main_calendar_table > tbody > tr:not(.weekday) > td{
+    /* height: 205px; */
 }
+.main_calendar_table > tbody > tr:not(.weekday) > td > div:nth-child(1) > span{
+    user-select: none;
+}
+.main_calendar_table > tbody > tr:not(.weekday) > td > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.main_calendar_table > tbody > tr:not(.weekday) > td > div:nth-child(2) > div{
+    width: 206px;
+    height: 24px;
+    /* border: 1px solid red; */
 
+}
 
 /* 220822 성선규 */
 /* ========================================== 일 달력 ========================================== */
 .calendar_day_calendar_container {
     padding: 0px 13px 0px 13px;
+}
+.main_day_calendar_page{
+    display: none;
 }
 
 /* 요일 */
@@ -440,6 +469,9 @@
 }
 
 /* ========================================== 주 달력 ========================================== */
+.main_week_calendar_page{
+    display: none;
+}
 .calendar_week_calendar_week {
     display: flex;
     margin-left: 72px;
@@ -534,13 +566,26 @@
 /* ========================================== 클릭 시 이벤트 설정 모달 나오기 ========================================== */
 /* 일정 색상 선택 */
 .arrow_arrow {
-    position: relative;
+    position: absolute;
     border: 1px solid rgba(128, 128, 128, 0.4);
     width: 300px;
     background-color: rgb(234, 234, 237);
     border-radius: 7px;
     box-shadow: 0 5px 15px 3px rgba(128, 128, 128, 0.3);
+    display: none;
+    top: 0;
+    animation: event_add_container_show 0.5s;
+    transition: all 0.1s;
 }
+@keyframes event_add_container_show {
+    0%{
+        transform: scale(0) translateX(-200px);
+    }
+    100%{
+        transform: scale(1) translateX(0);
+    }
+}
+
 
 .arrow_arrow>div:first-child {
     position: absolute;
@@ -623,6 +668,27 @@
     background-color: rgb(234, 234, 237);
     top: -250%;
     right: -12%;
+    transform: rotateX(90deg);
+    /* animation: category_select_color 0.5s; */
+}
+
+@keyframes category_select_color_open {
+    0%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+    
+}
+@keyframes category_select_color_close {
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(90deg);
+    }
+    
 }
 
 .arrow_title_or_color_container>ul>li {

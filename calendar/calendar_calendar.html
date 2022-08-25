@@ -329,6 +329,7 @@
                                 <td>
                                     <div class="month_in_day">
                                         <span>1</span>
+                                        <div></div>
                                     </div>
                                 </td>
                                 <td>
@@ -552,19 +553,14 @@
                     <div></div>
                     <div class="day_week_month">
                         <div>
-                            <span>
-                                일
-                            </span>
-                        </div>
-                        <div>
-                            <span>
-                                주
-                            </span>
-                        </div>
-                        <div>
-                            <span>
-                                월
-                            </span>
+                            <input type="radio" id="day_btn" name="day_week_month_btn">
+                            <label for="day_btn"><div>일</div></label>
+
+                            <input type="radio" id="week_btn" name="day_week_month_btn">
+                            <label for="week_btn"><div>주</div></label>
+
+                            <input type="radio" id="month_btn" name="day_week_month_btn" checked>
+                            <label for="month_btn"><div>월</div></label>
                         </div>
                     </div>
                     <div class="main_calendar_search_container">
@@ -603,7 +599,7 @@
                 </div>
 
                 <!-- ========================================= 메인 월 달력 =============================================== -->
-                <!-- <div>
+                <div class="main_month_calendar_page">
                     <table class="main_calendar_table">
                         <tr class="weekday">
                             <td class="main_calendar_weekend_week">
@@ -647,43 +643,134 @@
                                 <div class="not_included">
                                     <span>31일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>8월 1일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>2일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>3일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>4일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>5일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td class="main_calendar_weekend">
                                 <div>
                                     <span>6일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -691,43 +778,134 @@
                                 <div>
                                     <span>7일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>8일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>9일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>10일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>11일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>12일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td class="main_calendar_weekend">
                                 <div>
                                     <span>13일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -735,43 +913,134 @@
                                 <div>
                                     <span>14일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>15일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>16일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>17일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>18일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>19일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td class="main_calendar_weekend">
                                 <div>
                                     <span>20일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -779,43 +1048,134 @@
                                 <div>
                                     <span>21일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>22일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>23일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>24일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>25일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>26일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td class="main_calendar_weekend">
                                 <div>
                                     <span>27일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -823,43 +1183,134 @@
                                 <div>
                                     <span>28일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>29일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>30일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="main_calendar_weekday">
                                     <span>31일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="not_included">
                                     <span>10월 1일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="not_included">
                                     <span>2일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td class="main_calendar_weekend">
                                 <div class="not_included">
                                     <span>3일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -867,54 +1318,145 @@
                                 <div class="not_included">
                                     <span>4일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="not_included">
                                     <span>5일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="not_included">
                                     <span>6일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="not_included">
                                     <span>7일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="not_included">
                                     <span>8일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>
                                 <div class="not_included">
                                     <span>9일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                             <td class="main_calendar_weekend">
                                 <div class="not_included">
                                     <span>10일</span>
                                 </div>
-                                <div></div>
+                                <div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     </table>
-                </div> -->
+                </div>
 
                 <!-- ========================================= 메인 일 달력 =============================================== -->
                 <!-- 메인 일 달력 -->
-                <!-- <div class="calendar_day_calendar_container">
+                <div class="calendar_day_calendar_container main_day_calendar_page">
                     <div class="calendar_day_calendar_day_of_week">
                         <span>
-                            화요일
+                            금요일
                         </span>
                     </div>
                     <div class="calendar_day_calendar_all_time">
@@ -1108,9 +1650,9 @@
                             
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- ========================================= 메인 주 달력 =============================================== -->
-                <!-- <div>
+                <div class="main_week_calendar_page">
                     <div>
                         <div class="calendar_week_calendar_week">
                             <div>
@@ -1797,79 +2339,76 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <div>
+                </div>
+                <!-- ====================================================================================== -->
+                <div class="arrow_arrow">
+                    <div></div>
                     <div>
-                        <div class="arrow_arrow">
-                            <div></div>
-                            <div>
-                                <div class="arrow_title_or_color_container">
-                                    <input type="text" placeholder="새로운 이벤트">
-                                    <div class="back_ground_color_container">
-                                        <div></div>
-                                        <div>
-                                            <div>
-                                                <i class="fa-solid fa-chevron-up"></i>
-                                            </div>
-                                            <div>
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div></div>
-                                            <span>집</span>
-                                        </li>
-                                        <li>
-                                            <div></div>
-                                            <span>직장</span>
-                                        </li>
-                                        <li>
-                                            <div></div>
-                                            <span>약속</span>
-                                        </li>
-                                        <li>
-                                            <div></div>
-                                            <span>할일</span>
-                                        </li>
-                                        <li>
-                                            <div></div>
-                                            <span>생일</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="arrow_datetime_container">
-                                    <span class="arrow_datetime">
-                                        시간 설정
-                                    </span>
+                        <div class="arrow_title_or_color_container">
+                            <input type="text" placeholder="새로운 이벤트">
+                            <div class="back_ground_color_container">
+                                <div></div>
+                                <div>
                                     <div>
-                                        <div>
-                                            <span>
-                                                시작:
-                                            </span>
-                                            <input type="datetime-local">
-                                        </div>
-                                        <div>
-                                            <span>
-                                                종료:
-                                            </span>
-                                            <input type="datetime-local">
-                                        </div>
-                                        <div class="arrow_datetime_alarm">
-                                            <span>
-                                                알림:
-                                            </span>
-                                            <div>
-                                                없음
-                                            </div>
-                                        </div>
+                                        <i class="fa-solid fa-chevron-up"></i>
                                     </div>
-                                </div>
-                                <div class="arrow_memo">
-                                    <textarea name="" id="" cols="35" placeholder="메모"></textarea>
+                                    <div>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
                                 </div>
                             </div>
+                            <ul>
+                                <li>
+                                    <div></div>
+                                    <span>집</span>
+                                </li>
+                                <li>
+                                    <div></div>
+                                    <span>직장</span>
+                                </li>
+                                <li>
+                                    <div></div>
+                                    <span>약속</span>
+                                </li>
+                                <li>
+                                    <div></div>
+                                    <span>할일</span>
+                                </li>
+                                <li>
+                                    <div></div>
+                                    <span>생일</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="arrow_datetime_container">
+                            <span class="arrow_datetime">
+                                시간 설정
+                            </span>
+                            <div>
+                                <div>
+                                    <span>
+                                        시작:
+                                    </span>
+                                    <input type="datetime-local">
+                                </div>
+                                <div>
+                                    <span>
+                                        종료:
+                                    </span>
+                                    <input type="datetime-local">
+                                </div>
+                                <div class="arrow_datetime_alarm">
+                                    <span>
+                                        알림:
+                                    </span>
+                                    <div>
+                                        없음
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow_memo">
+                            <textarea name="" id="" cols="35" placeholder="메모"></textarea>
                         </div>
                     </div>
                 </div>
@@ -1881,7 +2420,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/scripts.js"></script>
-    <script src="calendar_calendar.html"></script>
+    <script src="/js/calendar_calendar.js"></script>
 </body>
 
 </html>
