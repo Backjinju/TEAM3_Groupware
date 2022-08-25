@@ -7,40 +7,30 @@
 *
 {
     /* border: 1px solid royalblue; */
-    
+    font-family: 'BBTreeGR';
+    font-weight: normal;
+    font-style: normal;
 }
 
-a:link {
-    text-decoration: none;
-    color: black;
-
-}
-
-a:visited {
-    text-decoration: none;
-    color: black;
-
-}
-
-a:hover {
-    text-decoration: none;
-    color: black;
-
-}
-
-a:active {
-    text-decoration: none;
-    color: black;
-
-}
+@font-face {
+    font-family: 'BBTreeGR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+   }
 
 /* 조직도 타이틀 */
 .office_map_title{
     height: 80px;
+    width: 100%;
+    font-size: 2rem;
+    font-family: 'BBTreeGR';
     padding: 15px;
     border-bottom: 1px solid gray;
-    font-size: 2rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
 
 }
 
@@ -74,6 +64,12 @@ a:active {
     margin-left: 15px;
     padding: 15px;
     font-weight: bold;
+}
+/* a 링크 밑줄 색 제거 */
+.office_map_group_employee > div > a:link , a:visited , a:hover , a:active{
+    text-decoration: none;
+    color: black;
+
 }
 .office_map_strategic_planning_team{
     /* display: none; */

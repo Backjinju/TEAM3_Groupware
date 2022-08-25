@@ -14,5 +14,3 @@ dropdown2.addEventListener('click',function(){
     dropdwonMenu2.style.display='block';
 })
 
-    
-    
