@@ -5,6 +5,7 @@
     font-style: normal;
 }
 
+
 .content_box{
         height: 80px;
         width: 100%;
@@ -15,6 +16,7 @@
         font-weight: bold;
         display: flex;
         align-items: center;
+        min-width: 800px;
 }
 .content_box button{
     margin-left: 10px;
@@ -33,6 +35,10 @@
     transition: 0.3s;
 }
 
+
+.basic_setting{
+    min-width: 800px;
+}
 .EDMS_docu_list{
     font-family: 'BBTreeGR';
     font-weight: bold;
@@ -52,6 +58,7 @@
     height: 100%;
     border-top : 1px solid dimgray;
     text-align: center;
+    min-width: 750px;
 }
 .EDMS_docu_table tr td{
     padding: 10px 0;
