@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/message_write.css" rel="stylesheet" />
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -26,7 +27,7 @@
         <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
                 <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
-                    aria-describedby="btnNavbarSearch"/>
+                    aria-describedby="btnNavbarSearch" />
                 <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
                         class="fas fa-search"></i></button>
             </div>
@@ -56,13 +57,14 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Home
                         </a>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_message"
-                            aria-expanded="false" aria-controls="collapse_message">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_message" aria-expanded="false" aria-controls="collapse_message">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             쪽지
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_message" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_message" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../message/message_write.html">쪽지쓰기</a>
                                 <a class="nav-link" href="../message/message_receive.html">받은쪽지함</a>
@@ -79,18 +81,19 @@
                             전자결재
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapseEDMS" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapseEDMS" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../EDMS/EDMS_home.html">전자결재홈</a>
                                 <a class="nav-link" href="../EDMS/EDMS_new.html">새결재진행</a>
                                 <a class="nav-link" href="../EDMS/EDMS_Temporary_box.html">임시보관함</a>
                                 <a class="nav-link" href="../EDMS/EDMS_wait.html">결재대기중</a>
                                 <a class="nav-link" href="../EDMS/EDMS_ing.html">진행중문서</a>
-                                <a class="nav-link" href="../EDMS/EDMS_end.html">완료문서</a>                    
+                                <a class="nav-link" href="../EDMS/EDMS_end.html">완료문서</a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_worktime"
-                            aria-expanded="false" aria-controls="collapse_worktime">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_worktime" aria-expanded="false" aria-controls="collapse_worktime">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             근태관리
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -103,60 +106,64 @@
                                 <a class="nav-link" href="../worktime/worktime_wait.html">승인대기중</a>
                                 <a class="nav-link" href="../worktime/worktime_ing.html">진행중문서</a>
                                 <a class="nav-link" href="../worktime/worktime_end.html">완료문서</a>
-                                <a class="nav-link" href="../worktime/worktime_view.html">출퇴근현황</a>                            
+                                <a class="nav-link" href="../worktime/worktime_view.html">출퇴근현황</a>
                             </nav>
-                         </div>
+                        </div>
                         <a class="nav-link" href="../todo/todo.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             ToDo+
                         </a>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_calendar"
-                            aria-expanded="false" aria-controls="collapse_calendar">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_calendar" aria-expanded="false" aria-controls="collapse_calendar">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             일정
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_calendar" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_calendar" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../calendar/calendar_calendar.html">캘린더</a>
                                 <a class="nav-link" href="../calendar/calendar_mycalendar.html">내 캘린더 관리</a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_booking"
-                            aria-expanded="false" aria-controls="collapse_booking">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_booking" aria-expanded="false" aria-controls="collapse_booking">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             예약
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_booking" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_booking" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../booking/booking_new.html">예약하기</a>
                                 <a class="nav-link" href="../booking/booking_view.html">나의 예약 목록 </a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_board"
-                            aria-expanded="false" aria-controls="collapse_board">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_board" aria-expanded="false" aria-controls="collapse_board">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             게시글
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_board" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_board" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../board/board_notice.html">공지게시판</a>
                                 <a class="nav-link" href="../board/board_normal.html">일반게시판</a>
                                 <a class="nav-link" href="../board/board_docu.html">자료실</a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collaps_address"
-                            aria-expanded="false" aria-controls="collapse_address">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collaps_address" aria-expanded="false" aria-controls="collapse_address">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             주소록
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collaps_address" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collaps_address" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../address/address_all.html">전사 주소록</a>
-                                <a class="nav-link" href="../address/address_personal.html">개인 주소록</a>                                
+                                <a class="nav-link" href="../address/address_personal.html">개인 주소록</a>
                             </nav>
                         </div>
                         <a class="nav-link" href="../office_map/office_map.html">
@@ -217,17 +224,51 @@
                 <div class="modal_container">
                     <div class="dept">
                         <ul>
-                            <li><a href="">경영지원</a></li>
-                            <li><a href="">영업</a></li>
-                            <li><a href="">인사</a></li>
-                            <li><a href="">IT</a></li>
-                            <li><a href="">마켓팅</a></li>
-                            <li><a href="">총무</a></li>
-                            <li><a href="">영업지원</a></li>
+                            <li><button class="ajax1">전략기획팀</button></li>
+                            <li><button class="ajax2">경영지원팀</button></li>
+                            <li><button class="ajax3">인사팀</button></li>
+                            <li><button class="ajax4">영업팀</button></li>
+                            <li><button class="ajax5">마켓팅팀</button></li>
+                            <li><button class="ajax6">IT팀</button></li>
                         </ul>
                     </div>
-                    <div class="modal_personal_info">
-
+                    <div id="modal_personal_info">
+                        <!-- <table class="dept_right">
+                            <thead>
+                                <tr>
+                                    <th>부서</td>
+                                    <th>직책</td>
+                                    <th>이름</td>
+                                    <th>사원코드</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="dept1">전략기획</td>
+                                    <td id="posion1">부장</td>
+                                    <td id="name1">노현</td>
+                                    <td id="code1">2208011</td>
+                                </tr>
+                                <tr>
+                                    <td>전략기획</td>
+                                    <td>부장</td>
+                                    <td>노현</td>
+                                    <td>2208011</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table> -->
                     </div>
                 </div>
             </div>
@@ -237,6 +278,7 @@
         crossorigin="anonymous"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/message_write.js"></script>
+    <script src="../js/message_jquery.js"></script>
 </body>
 
 </html>
