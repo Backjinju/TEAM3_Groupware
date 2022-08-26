@@ -9,7 +9,9 @@
     <meta name="author" content="" />
     <title>JaeHee Group</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="admin_login_history.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,9 +19,10 @@
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="/home_admin.html">JaeHee</a>
+        <!-- 22/08/21 토글박스 삭제  -->
         <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
+        <!-- <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                    class="fas fa-bars"></i></button> -->
         <!-- Navbar Search-->
         <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
@@ -35,7 +38,7 @@
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="mypage.html">기본정보</a></li>
                     <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                     <li>
                         <hr class="dropdown-divider" />
@@ -54,13 +57,14 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Home
                         </a>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_message"
-                            aria-expanded="false" aria-controls="collapse_message">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_message" aria-expanded="false" aria-controls="collapse_message">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             쪽지
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapse_message" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapse_message" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../admin/admin_message_write.html">쪽지쓰기</a>
                                 <a class="nav-link" href="../admin/admin_message_receive.html">받은쪽지함</a>
@@ -71,13 +75,14 @@
                                 <a class="nav-link" href="../admin/admin_message_trash.html">휴지통</a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collaps_address"
-                            aria-expanded="false" aria-controls="collapse_address">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collaps_admin"
+                            aria-expanded="false" aria-controls="collapse_admin">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             관리자메뉴
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collaps_address" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collaps_admin" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="">전자결재관리</a>
                                 <a class="nav-link" href="">근태관리</a>
@@ -85,7 +90,7 @@
                                 <a class="nav-link" href="">게시글관리</a>
                                 <a class="nav-link" href="admin_personnel_card.html">인사기록카드</a>
                                 <a class="nav-link" href="admin_login_history.html">접속내역확인</a>
-                                <a class="nav-link" href="admin_authority.html">권한관리</a>                          
+                                <a class="nav-link" href="admin_authority.html">권한관리</a>
                             </nav>
                         </div>
                     </div>
@@ -96,15 +101,61 @@
                 </div>
             </nav>
         </div>
+
+
         <div id="layoutSidenav_content">
-            <div class="content_box" style="background-color: gray; height: 80px;">
-                80px
+            <div class="content_box">
+                <!-- <i class="fa-solid fa-right-to-bracket"></i> -->접속내역확인
             </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="../js/scripts.js"></script>
+
+
+
+            <!-- 기본정보_본문 -->
+            <div class="admin_login_history">
+                <div class="search">
+                    <span class="office_map_btn"><a href="">조직도 조회</a></span>
+                    <span>사원번호</span>
+                    <input type="text">
+                    <i class="xi-search"></i>
+                </div>
+                <div class="history_list">
+                    <table>
+                        <thead>
+                            <td>No.</td>
+                            <td>사원번호</td>
+                            <td>사원명</td>
+                            <td>접속일시</td>
+                            <td>접속IP</td>
+                            <td>비고</td>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td>12345</td>
+                            <td>홍길동</td>
+                            <td>2022-08-26 17:50:13</td>
+                            <td>21.123.456.78</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                crossorigin="anonymous"></script>
+            <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

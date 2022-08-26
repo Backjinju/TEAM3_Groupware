@@ -195,7 +195,7 @@
 }
 
 .admin_personnel_body .details .details_right {
-    width: 100%;
+    width: 80%;
     height: 700px;
     position: relative;
 }
@@ -209,6 +209,7 @@
 
 .admin_personnel_body .details .box div {
     width: 100px;
+    line-height: 30px;
     margin-right: 10px;
 }
 
@@ -248,7 +249,7 @@
 } */
 
 .admin_personnel_body .details_btn {
-    width: 80%;
+    width: 40%;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -267,7 +268,7 @@
     background-color: rgba(0, 0, 0, 0.149);
 }
 
-.admin_personnel_body .details .btn_delete{
+.admin_personnel_body .details .btn_cancel{
     color: red;
 }
 
