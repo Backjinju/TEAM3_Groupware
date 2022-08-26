@@ -11,8 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="EDMS_home.css">
-    <link rel="stylesheet" href="EDMS_Temporary_box.html">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="EDMS_Temporary_box.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
@@ -179,11 +178,12 @@
             </div>
 
             <div class="EDMS_docu_list">
-            <p>결재 대기중 문서</p>
-            <div id="EDMS_docu_font">승인할 문서가 <strong>24</strong>건 있습니다.</div>
+            <p>임시 저장된 문서</p>
+            <button id="EDMS_docu_del_btn"><i class="xi-trash"></i>삭제</button>
             <div class="EDMS_docu_table_list">
             <table class="EDMS_docu_table">
                 <tr class="EDMS_table_bg">
+                    <td><input type="checkbox"></td>
                     <td>문서번호</td>
                     <td>기안일</td>
                     <td>결재양식</td>
@@ -192,6 +192,7 @@
                     <td>첨부</td>
                 </tr>
                 <tr class="EDMS_table_hover">
+                    <td><input type="checkbox"></td>
                     <td>20203086</td>
                     <td>2021-12-10</td>
                     <td>품의서</td>
@@ -200,14 +201,16 @@
                     <td><i class="xi-paper"></i></td>
                 </tr>
                 <tr class="EDMS_table_hover">
+                    <td><input type="checkbox"></td>
                     <td>20203075</td>
                     <td>2021-12-05</td>
                     <td>품의서</td>
                     <td>김형준</td>
                     <td>교통비 신청 </td>
-                    <td><i class="xi-paper"></i></td>
+                    <td></td>
                 </tr>
                 <tr class="EDMS_table_hover">
+                    <td><input type="checkbox"></td>
                     <td>20203064</td>
                     <td>2021-11-15</td>
                     <td>품의서</td>
@@ -216,14 +219,16 @@
                     <td><i class="xi-paper"></i></td>
                 </tr>
                 <tr class="EDMS_table_hover">
+                    <td><input type="checkbox"></td>
                     <td>20203053</td>
                     <td>2021-11-10</td>
                     <td>품의서</td>
                     <td>박예솔</td>
                     <td>교통비 신청</td>
-                    <td><i class="xi-paper"></i></td>
+                    <td></td>
                 </tr>
                 <tr class="EDMS_table_hover">
+                    <td><input type="checkbox"></td>
                     <td>20203042</td>
                     <td>2021-11-08</td>
                     <td>품의서</td>
@@ -235,114 +240,6 @@
              </div>
             </div>
 
-            <div class="EDMS_docu_list">
-                <p>기안 진행 문서</p>
-                <div class="EDMS_docu_table_list">
-                <table class="EDMS_docu_table">
-                    <tr class="EDMS_table_bg">
-                        <td>문서번호</td>
-                        <td>기안일</td>
-                        <td>결재양식</td>
-                        <td>긴급</td>
-                        <td style="width:40%">제목</td>
-                        <td>첨부</td>
-                    </tr>
-                    <tr class="EDMS_table_hover">
-                        <td>202101181</td>
-                        <td>2021-01-08</td>
-                        <td>증명서신청</td>
-                        <td><i class="xi-error"></i></td>
-                        <td>재직증명서 신청합니다.</td>
-                        <td><i class="xi-paper"></i></td>
-                    </tr>
-                    <tr class="EDMS_table_hover">
-                        <td>202101192</td>
-                        <td>2020-12-01</td>
-                        <td>비용품의서</td>
-                        <td></td>
-                        <td>통신비 신청2</td>
-                        <td><i class="xi-paper"></i></td>
-                    </tr>
-                    <tr class="EDMS_table_hover">
-                        <td>202101191</td>
-                        <td>2021-12-01</td>
-                        <td>비용품의서</td>
-                        <td></td>
-                        <td>교통비 신청합니다.</td>
-                        <td><i class="xi-paper"></i></td>
-                    </tr>
-                    <tr class="EDMS_table_hover">
-                        <td>202101190</td>
-                        <td>2021-11-19</td>
-                        <td>품의서</td>
-                        <td><i class="xi-error"></i></td>
-                        <td>사내교육 진행안 보고의 건</td>
-                        <td><i class="xi-paper"></i></td>
-                    </tr>
-                </table>
-                 </div>
-                </div>
-
-                <div class="EDMS_docu_list">
-                    <p>완료 문서</p>
-                    <div class="EDMS_docu_table_list">
-                    <table class="EDMS_docu_table">
-                        <tr class="EDMS_table_bg">
-                            <td>문서번호</td>
-                            <td>기안일</td>
-                            <td>결재양식</td>
-                            <td>긴급</td>
-                            <td style="width:40%">제목</td>
-                            <td>첨부</td>
-                            <td>결재상태</td>
-                        </tr>
-                        <tr class="EDMS_table_hover">
-                            <td>20210168</td>
-                            <td>2021-01-04</td>
-                            <td>증명서신청</td>
-                            <td><i class="xi-error"></i></td>
-                            <td>재직증명서 신청의 건(test)</td>
-                            <td><i class="xi-paper"></i></td>
-                            <td>승인</td>
-                        </tr>
-                        <tr class="EDMS_table_hover">
-                            <td>20210167</td>
-                            <td>2021-01-03</td>
-                            <td>증명서신청</td>
-                            <td><i class="xi-error"></i></td>
-                            <td>재직증명서 신청의 건</td>
-                            <td><i class="xi-paper"></i></td>
-                            <td>반려</td>
-                        </tr>
-                        <tr class="EDMS_table_hover">
-                            <td>20210164</td>
-                            <td>2021-01-02</td>
-                            <td>증명서신청</td>
-                            <td><i class="xi-error"></i></td>
-                            <td>재직증명서 신청의 건</td>
-                            <td><i class="xi-paper"></i></td>
-                            <td>승인</td>
-                        </tr>
-                        <tr class="EDMS_table_hover">
-                            <td>20210193</td>
-                            <td>2020-12-01</td>
-                            <td>비용품의서</td>
-                            <td></td>
-                            <td>거래처 미지급금 결재의 건</td>
-                            <td><i class="xi-paper"></i></td>
-                            <td>승인</td>
-                        </tr>
-                        <tr class="EDMS_table_hover">
-                            <td>20210189</td>
-                            <td>2020-12-01</td>
-                            <td>품의서</td>
-                            <td></td>
-                            <td>기획전 프로모션 결재의 건</td>
-                            <td><i class="xi-paper"></i></td>
-                            <td>승인</td>
-                        </tr>
-                     
-                    </table>
                      </div>
                     </div>
         </div>

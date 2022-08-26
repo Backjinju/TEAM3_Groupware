@@ -17,4 +17,12 @@
     align-items: center;
     position: relative;
     }
-        
+#EDMS_docu_del_btn{
+    background-color: white;
+    border: none;
+    margin-bottom: 10px;
+    font-family: 'BBTreeGR';
+    font-size: 15px;
+    position:relative;
+    top: 10px;
+}
