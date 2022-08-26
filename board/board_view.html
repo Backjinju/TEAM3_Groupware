@@ -219,29 +219,27 @@
                     <button>목록보기</button>                  
                 </div>
                 <!-- 댓글 -->
-                <div class="footerText">
-                    <h2><i class="fa-solid fa-comments"></i>댓글쓰기</h2>
-                    <div class="footerTextFont">백진주</div>
-                    <div>
-                        <p>닭 두개 먹어도 되죠 ?ㅎㅎ</p>
-                        <p>2022.7.23 15:23</p>
+                <div id="board_form_commentinfo">
+                    <div id="board_comment_count">
+                        <h2><i class="fa-solid fa-comments"></i>댓글
+                            [<span id="comment_count" >0</span>]</h2>
+                            <input id="board_comment_input" placeholder="댓글을 입력해 주세요.">
+                    <button id="board_comment_submit">등록</button>
                     </div>
-                    <!-- <div class="footerTextColor">
-                        <p>작성자</p>
-                    </div> -->
-                    <div class="inputText"></div>
-                    <div class="footerAnswer">
-                        <input type="text" name="" id="text" class="answerInput" placeholder="답글을 작성해주세요">
-                        <button class="answerBtn">답글 입력</button>                        
+                    
+                
+                    <div id=board_comments_con>
+            
                     </div>
-                </div>
+                </div>  
+                         
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="../js/scripts.js"></script>
-    <script src="board.js"></script>
+    <script src="/js/board.js"></script>
 </body>
 
 </html>
