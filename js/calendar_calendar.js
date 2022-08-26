@@ -16,6 +16,9 @@ const event_add_memo_textarea = document.querySelector(".arrow_memo > textarea")
 // 이벤트 색상 선택 박스 버튼
 const back_ground_color_container = document.querySelector(".back_ground_color_container");
 
+// 이벤트 색상 박스
+const event_add_back_ground_color = document.querySelector(".back_ground_color_container > div:nth-child(1)");
+
 // 이벤트 색상 선택 박스
 const color_select_container = document.querySelector(".arrow_title_or_color_container > ul");
 
@@ -244,6 +247,22 @@ back_ground_color_container.addEventListener("click", function (e) {
 for (let i = 0; i < color_selecter.length; i++) {
     color_selecter[i].addEventListener("click", function (e) {
         console.dir(this.children[1].childNodes[0].data)
+        if(this.children[1].childNodes[0].data == "집"){
+            event_add_back_ground_color.style.backgroundColor = "rgb(13, 110, 213)";
+            close_event_add();
+        } else if(this.children[1].childNodes[0].data == "직장"){
+            event_add_back_ground_color.style.backgroundColor = "red";
+            close_event_add();
+        }else if(this.children[1].childNodes[0].data == "약속"){
+            event_add_back_ground_color.style.backgroundColor = "rgb(194, 136, 30)";
+            close_event_add();
+        }else if(this.children[1].childNodes[0].data == "할일"){
+            event_add_back_ground_color.style.backgroundColor = "rgb(41, 170, 12)";
+            close_event_add();
+        }else if(this.children[1].childNodes[0].data == "생일"){
+            event_add_back_ground_color.style.backgroundColor = "rgb(165, 17, 176)";
+            close_event_add();
+        }
     })
 }
 event_add_container_arrow.addEventListener("click", function () {
@@ -269,10 +288,6 @@ event_add_datetime_container.addEventListener("click", function () {
     event_add_container.style.transform = "translateY(-30px)";
 })
 
-event_add_memo_textarea.addEventListener("click", function () {
-    close_event_add();
-})
-
 event_add_memo_textarea.addEventListener("click", function(){
     close_event_add();
     event_add_datetime_box.style.display = "none";
@@ -282,5 +297,15 @@ event_add_memo_textarea.addEventListener("click", function(){
     event_add_datetime_container.style.width = "";
     event_add_datetime_container.style.height = "";
     event_add_datetime_container.style.transform = "translateX(0px)";
-    event_add_datetime_box.style.animation = "event_add_datetime_box_close 0.5s";
+    event_add_datetime_container.style.animation = "event_add_datetime_box_close 1s";
+
+    event_add_container_arrow.style.top = "50%";
+    event_add_container.style.transform = "translateY(0px)";
+
+    event_add_memo_textarea.style.transition = "all 0.5s";
 })
+
+$(event_add_memo_textarea).on('keyup', function (e) {
+    $(this).css('height', 'auto');
+    $(this).height(this.scrollHeight + 16);
+});
