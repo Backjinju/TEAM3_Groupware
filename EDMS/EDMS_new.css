@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    min-width: 800px;
+    min-width: 850px;
     }
 .EDMS_new_container{
     display: flex;
@@ -24,7 +24,7 @@
     justify-content: center;
      margin-left: 10%;
     margin-right: 10%;
-    min-width: 800px;
+    min-width: 850px;
 }
         
 .basic_setting{
@@ -60,6 +60,10 @@
 .table_size{
     width: 20% !important;
 }
+#EDMS_money_table_size{
+    width: 85%;
+    text-align: right;
+}
 #btn_bg{
     font-family: 'BBTreeGR';
     font-weight: bold;
@@ -70,6 +74,7 @@
     background-color: white;
     color: dimgray;
     border: 2px solid dimgray;
+    cursor: pointer;
 }
 #btn_bg:hover{
     background-color:rgb(13, 110, 253);
@@ -89,6 +94,7 @@
     font-weight: bold;
     font-family: 'BBTreeGR';
     padding: 15px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -130,10 +136,32 @@
 .input_table input[type=text]{
     width: 95%;
     float: left;
-    margin-left: 5px;
+    margin-left: 5px;   
+}
+.EDMS_new_impor_position div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.EDMS_new_impor{
+    background-color: gray;
+    margin-left: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 45px;
+    height: 20px;
+    position: relative;
     
 }
-
+.EDMS_new_impor_btn{
+    background-color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    position:absolute;
+    left: 1px;
+}
 
 .EDMS_new_api{
     margin-top : 5px;
@@ -146,4 +174,34 @@
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+
+.EDMS_btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.EDMS_input_btn{
+    margin : 20px 10px 50px;
+    border-radius: 30px;
+    width: 80px;
+    height: 35px;
+    font-family: 'BBTreeGR';
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.EDMS_approval:hover{
+    background-color: rgb(13, 110, 253);
+    color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+.EDMS_cancel:hover{
+    background-color: gray;
+    color: white;
+    border: 2px solid gray;
 }
