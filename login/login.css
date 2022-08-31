@@ -70,6 +70,7 @@
     height: 150px;
     font-size: 2rem;
     line-height: 150px;
+    text-align: center;
 }
 
 .login_idpw {
@@ -101,6 +102,21 @@
     outline: none;
     caret-color: gray;
 }
+
+
+@keyframes inputWrong {
+    0% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 10px;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+
+
 
 .login_submit {
     width: 300px;

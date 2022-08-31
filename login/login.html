@@ -34,7 +34,7 @@
                 <button class="login_submit btn btn-primary">접속</button>
                 <div class="login_option">
                     <div class="login_save_id">
-                        <input type="checkbox" id="login_save_id_checkbox" name="login_save_id_checkbox">
+                        <input type="checkbox" id="login_save_id_checkbox" name="login_save_id_checkbox" [value]="login_id_input?.length>0 : login_id_input : '' ">
                         <label for="login_save_id_checkbox">
                             <span>사원번호 저장</span>
                         </label>
