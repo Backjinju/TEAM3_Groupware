@@ -65,6 +65,10 @@
     padding: 15px;
     font-weight: bold;
 }
+.office_map_group_employee.active{
+    display: block;
+}
+
 /* a 링크 밑줄 색 제거 */
 .office_map_group_employee > div > a:link , a:visited , a:hover , a:active{
     text-decoration: none;
