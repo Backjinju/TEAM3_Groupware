@@ -36,7 +36,7 @@
     transition: 0.3s;
 }
 
-
+/* 홈 전체 테이블 */
 .basic_setting{
     min-width: 800px;
 }
@@ -74,4 +74,7 @@
 .EDMS_table_bg{
     background-color: gray;
     color: white;
+}
+.xi-error{
+  color: crimson;
 }
