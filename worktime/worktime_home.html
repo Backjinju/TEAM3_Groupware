@@ -98,7 +98,7 @@
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../worktime/worktime_home.html">근태관리홈</a>
-                                <a class="nav-link" href="../worktime/worktime_new.html">연차신청하기</a>
+                                <a class="nav-link" href="../worktime/worktime_new.html">휴가계신청</a>
                                 <a class="nav-link" href="../worktime/worktime_wait.html">승인대기중</a>
                                 <a class="nav-link" href="../worktime/worktime_ing.html">진행중문서</a>
                                 <a class="nav-link" href="../worktime/worktime_end.html">완료문서</a>
@@ -183,12 +183,12 @@
                  <div>출근시간입력 <input type="time" name="" id="commute_intput_margin"></div>
                  <div>퇴근시간입력 <input type="time" name="" id="commute_intput_margin"></div>
                  <div>총 업무시간 <input type="datetime" name="" id="commute_intput_margin" size="3px">시간</div>
-                 <button>출퇴근제출</button>
+                 <input type="button" id="worktime_btn" value="출퇴근제출">
                 </div>
             </div>
 
             <div class="my_annual_leave">
-                <div>내 연차 내역 <button>연차신청하기</button></div>
+                <div>내 연차 내역 <input type="button" value="휴가계신청" id="annual_leave_btn"></div>
                 <div class="my_annual_leave_list">
                     <div class="my_annual_name">
                     <p>오슬기 부장<br>전략기획팀</p>
@@ -308,29 +308,6 @@
                     <td><i class="xi-paper"></i></td>
                     <td>승인</td>
                 </tr>
-                <tr class="docu_table_hover">
-                    <td>202020098</td>
-                    <td>2021-10-07</td>
-                    <td>반차신청서</td>
-                    <td>오전반차 신청합니다.</td>
-                    <td><i class="xi-paper"></i></td>
-                    <td>승인</td>
-                </tr>
-                <tr class="docu_table_hover">
-                    <td>202020071</td>
-                    <td>2021-08-15</td>
-                    <td>출장신청서</td>
-                    <td>타 계열사 출장갑니다.</td>
-                    <td><i class="xi-paper"></i></td>
-                    <td>승인</td>
-                </tr>
-                <tr class="docu_table_hover">
-                    <td>202020070</td>
-                    <td>2021-08-14</td>
-                    <td>휴가신청서</td>
-                    <td>휴가 가고 싶습니다!</td>
-                    <td><i class="xi-paper"></i></td>
-                    <td>반려</td>
                 </tr>
             </table>
        </div>

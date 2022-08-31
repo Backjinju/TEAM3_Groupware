@@ -98,7 +98,7 @@
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../worktime/worktime_home.html">근태관리홈</a>
-                                <a class="nav-link" href="../worktime/worktime_new.html">연차신청하기</a>
+                                <a class="nav-link" href="../worktime/worktime_new.html">휴가계신청</a>
                                 <a class="nav-link" href="../worktime/worktime_wait.html">승인대기중</a>
                                 <a class="nav-link" href="../worktime/worktime_ing.html">진행중문서</a>
                                 <a class="nav-link" href="../worktime/worktime_end.html">완료문서</a>
@@ -173,6 +173,47 @@
         <div id="layoutSidenav_content">
             <div class="content_box">
                 승인진행중
+            </div>
+
+            <!-- 진행중문서 리스트 테이블 -->
+            <div class="worktime_ing_docu_list">
+                <p>근태 진행 문서</p>
+                <div class="worktime_ing_docu_table_list">
+                <table class="worktime_ing_docu_table">
+                    <tr class="worktime_ing_table_bg">
+                        <td>문서번호</td>
+                        <td>기안일</td>
+                        <td>결재양식</td>
+                        <td style="width:40%">제목</td>
+                        <td>첨부</td>
+                    </tr>
+                    <tr class="worktime_ing_table_hover">
+                        <td>20203086</td>
+                        <td>2021-12-10</td>
+                        <td>연차신청서</td>
+                        <td>휴가갈래요</td>
+                        <td><i class="xi-paper"></i></td>
+                    </tr>
+                    <tr class="worktime_ing_table_hover">
+                        <td>20203086</td>
+                        <td>2021-12-10</td>
+                        <td>연차신청서</td>
+                        <td>휴가갈래요</td>
+                        <td><i class="xi-paper"></i></td>
+                    </tr>
+                </table>
+        </div>
+
+           <!-- 페이지 넘버 -->
+           <div class="worktime_ing_list_number">
+            <div>
+                <div class="worktime_ing_list_n_menu">
+                    <span class="worktime_ing_disabled"><  이전</span>
+                    <span class="worktime_ing_current">1</span>
+                    <a href="#?page=2">2</a>
+                    <a href="#?page=3">3</a>
+                    <span class="worktime_ing_disabled">다음  ></span>                                
+                </div>                            
             </div>
         </div>
     </div>
